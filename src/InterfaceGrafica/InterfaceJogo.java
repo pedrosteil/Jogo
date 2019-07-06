@@ -1,9 +1,10 @@
+package InterfaceGrafica;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package InterfaceGrafica;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -113,7 +114,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
 		}
 		public void actionPerformed(ActionEvent e) {
 			// Necess�rio definir endere�o do servidor e nome do jogador
-			String mensagem = atorJogador.conectar("localhost", "nomeJogador?");
+			String mensagem = atorJogador.conectar("netgames.labsoft.ufsc.br", "nomeJogador?");
 			JOptionPane.showMessageDialog(null, mensagem);
 		}
 	}

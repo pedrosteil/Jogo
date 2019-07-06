@@ -1,7 +1,9 @@
 package InterfaceGrafica;
 
+
+
 import DominioDoProblema.ElementoDominioProblema;
-import Rede.AtorNetgames;
+import osvinga.netgames.AtorNetgames;
 
 public class AtorJogador {
 	

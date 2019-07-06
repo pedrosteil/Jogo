@@ -1,4 +1,4 @@
-package Rede;
+package netgames;
 
 import javax.swing.JOptionPane;
 

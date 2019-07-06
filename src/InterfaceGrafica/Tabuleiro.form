@@ -87,7 +87,6 @@
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                                       <Component id="casa29" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                                       <Component id="casa28" min="-2" max="-2" attributes="0"/>
@@ -97,7 +96,6 @@
                                                       <Component id="casa26" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                                       <Component id="casa25" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -287,7 +285,7 @@
                           <Component id="casa12" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="casa13" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="381" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="383" max="-2" attributes="0"/>
                       <Component id="casa32" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -642,7 +640,7 @@
     <Component class="javax.swing.JButton" name="casa23">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -655,7 +653,7 @@
     <Component class="javax.swing.JButton" name="casa24">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -668,7 +666,7 @@
     <Component class="javax.swing.JButton" name="casa25">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -681,7 +679,7 @@
     <Component class="javax.swing.JButton" name="casa26">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -694,7 +692,7 @@
     <Component class="javax.swing.JButton" name="casa27">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -707,7 +705,7 @@
     <Component class="javax.swing.JButton" name="casa28">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -720,7 +718,7 @@
     <Component class="javax.swing.JButton" name="casa29">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -733,7 +731,7 @@
     <Component class="javax.swing.JButton" name="casa30">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -746,7 +744,7 @@
     <Component class="javax.swing.JButton" name="casa31">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -759,7 +757,7 @@
     <Component class="javax.swing.JButton" name="casa32">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 50]"/>
@@ -1012,7 +1010,7 @@
     <Component class="javax.swing.JButton" name="cverde1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1033,7 +1031,7 @@
     <Component class="javax.swing.JButton" name="cverde2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1054,7 +1052,7 @@
     <Component class="javax.swing.JButton" name="cverde3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1075,7 +1073,7 @@
     <Component class="javax.swing.JButton" name="cverde4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/InterfaceGrafica/vazio.png"/>
+          <Image iconType="3" name="/InterfaceGrafica/sem_carta.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
