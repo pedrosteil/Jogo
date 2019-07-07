@@ -2,6 +2,7 @@ package InterfaceGrafica;
 
 import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -269,7 +270,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa23.setPreferredSize(new java.awt.Dimension(50, 50));
         casa23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,7 +278,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa24.setPreferredSize(new java.awt.Dimension(50, 50));
         casa24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,7 +286,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa25.setPreferredSize(new java.awt.Dimension(50, 50));
         casa25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,7 +294,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa26.setPreferredSize(new java.awt.Dimension(50, 50));
         casa26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -301,7 +302,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa27.setPreferredSize(new java.awt.Dimension(50, 50));
         casa27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -309,7 +310,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa28.setPreferredSize(new java.awt.Dimension(50, 50));
         casa28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -317,7 +318,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa29.setPreferredSize(new java.awt.Dimension(50, 50));
         casa29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -325,7 +326,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa30.setPreferredSize(new java.awt.Dimension(50, 50));
         casa30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -333,7 +334,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa31.setPreferredSize(new java.awt.Dimension(50, 50));
         casa31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,7 +342,7 @@ public class Tabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/sem_carta.png"))); // NOI18N
+        casa32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa32.setPreferredSize(new java.awt.Dimension(50, 50));
         casa32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1021,6 +1022,13 @@ public class Tabuleiro extends javax.swing.JPanel {
        return casa.getIcon();
       }
 
+    public String solictarEnderecoServidor() {
+        return JOptionPane.showInputDialog(this, "Digite o Endereço do servidor:", "netgames.labsoft.ufsc.br");
+    }
+
+    public String solicitarNomeJogador() {
+        return JOptionPane.showInputDialog(this, "Digite o Nome do Jogador:");
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel carta1;

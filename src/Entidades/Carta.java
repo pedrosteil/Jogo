@@ -3,12 +3,14 @@ package Entidades;
 class Carta {
     
     int numero;
+    int naipe;
 
     public Carta() {
     }
 
-    public Carta(int numero) {
+    public Carta(int numero, int naipe) {
         this.numero = numero;
+        this.naipe = naipe;
     }
 
     public int getNumero() {
@@ -18,6 +20,15 @@ class Carta {
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
+    public int getNaipe() {
+        return naipe;
+    }
+
+    public void setNaipe(int naipe) {
+        this.naipe = naipe;
+    }
+    
     
     
 }

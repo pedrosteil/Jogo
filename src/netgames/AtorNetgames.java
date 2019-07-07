@@ -1,4 +1,6 @@
-package osvinga.netgames;
+package netgames;
+
+
 
 
 

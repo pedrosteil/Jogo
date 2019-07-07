@@ -25,13 +25,24 @@ import javax.swing.JPanel;
  *
  * @author Carol
  */
-public class InterfaceJogo extends javax.swing.JFrame {
+public class ControladorTabuleiro extends javax.swing.JFrame {
 
 	private JFrame frame;
-	private final Action action = new InterfaceJogo.SwingAction();
-	private final Action action_1 = new InterfaceJogo.SwingAction_1();
-	private final Action action_2 = new InterfaceJogo.SwingAction_2();
+	private final Action action = new ControladorTabuleiro.SwingAction();
+	private final Action action_1 = new ControladorTabuleiro.SwingAction_1();
+	private final Action action_2 = new ControladorTabuleiro.SwingAction_2();
 	private AtorJogador atorJogador;
+        private Baralho baralho;
+        private boolean partidaAndamento;
+        private boolean conectado;
+
+    public AtorJogador getAtorJogador() {
+        return atorJogador;
+    }
+
+    public void setAtorJogador(AtorJogador atorJogador) {
+        this.atorJogador = atorJogador;
+    }
 
 	/**
 	 * Launch the application.
@@ -40,7 +51,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					InterfaceJogo window = new InterfaceJogo();
+					ControladorTabuleiro window = new ControladorTabuleiro();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -52,7 +63,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
-    public InterfaceJogo() {
+    public ControladorTabuleiro() {
         initialize();
         initComponents();
     }
@@ -72,8 +83,7 @@ public class InterfaceJogo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     private void initialize() {
-		atorJogador = new AtorJogador();
-		
+		atorJogador = new AtorJogador(this);		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 900,900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,6 +113,39 @@ public class InterfaceJogo extends javax.swing.JFrame {
                 
                 frame.getContentPane().add(jPanelTabuleiro, BorderLayout.CENTER);
 	}
+    
+    public void definirConectado(boolean valor) {
+		conectado = valor;
+	}
+	
+	public boolean estaConectado() {
+		return conectado;
+	}
+	
+	public void definirPartidaAndamento(boolean valor) {
+		partidaAndamento = valor;
+	}
+	
+	public boolean informarPartidaAndamento() {
+		return partidaAndamento;
+	}
+	
+	public boolean permitidoConectar() {
+		return !conectado;
+		// defina a lgica do seu jogo
+	}
+	
+	public boolean permitidoDesconectar() {
+		return conectado;
+		// defina a lgica do seu jogo
+	}
+
+	public boolean permitidoIniciarPartida() {
+		return !partidaAndamento;
+		// defina a lgica do seu jogo
+	}
+
+ 
 	private class SwingAction extends AbstractAction {
 		/**
 		 * 
@@ -114,6 +157,8 @@ public class InterfaceJogo extends javax.swing.JFrame {
 		}
 		public void actionPerformed(ActionEvent e) {
 			// Necess�rio definir endere�o do servidor e nome do jogador
+                        String servidor = atorJogador.solictarEnderecoServidor();
+                        String nome = atorJogador.solicitarNomeJogador();
 			String mensagem = atorJogador.conectar("netgames.labsoft.ufsc.br", "nomeJogador?");
 			JOptionPane.showMessageDialog(null, mensagem);
 		}
@@ -146,6 +191,8 @@ public class InterfaceJogo extends javax.swing.JFrame {
 			JOptionPane.showMessageDialog(null, mensagem);
 		}
 	}
+        
+        
     /**
      * @param args the command line arguments
      */
