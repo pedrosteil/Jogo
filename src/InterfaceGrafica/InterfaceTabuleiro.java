@@ -1,7 +1,12 @@
 package InterfaceGrafica;
 
+import Entidades.Carta;
+import Entidades.Jogador;
+import Entidades.Tabuleiro;
+import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
@@ -14,15 +19,17 @@ import javax.swing.JButton;
  *
  * @author Carol
  */
-public class Tabuleiro extends javax.swing.JPanel {
+public class InterfaceTabuleiro extends javax.swing.JPanel {
 
     Icon casaverde = new javax.swing.ImageIcon(getClass().getResource("verde.png"));
     Icon casavermelho = new javax.swing.ImageIcon(getClass().getResource("vermelho.png"));
+    ArrayList<javax.swing.JLabel> espacoCartas;
     /**
      * Creates new form NewJPanel
      */
-    public Tabuleiro() {
+    public InterfaceTabuleiro() {
         initComponents();
+        iniciarTabuleiro(1);
     }
 
     /**
@@ -1030,6 +1037,45 @@ public class Tabuleiro extends javax.swing.JPanel {
         return JOptionPane.showInputDialog(this, "Digite o Nome do Jogador:");
     }
     
+    public void atualizarInterface(Tabuleiro tabuleiro, int indexjogador){
+        Jogador jogador = null;
+        Icon icone;
+        if(indexjogador == 1){
+            icone = casaverde;
+            jogador = tabuleiro.getJogadorLocal();
+            
+        }
+        else{
+            icone = casavermelho;
+            jogador = tabuleiro.getJogadorRemoto();
+        } 
+        ArrayList<Carta> cartas = jogador.getCartas();
+        for(int i =0; i < espacoCartas.size(); i++){
+            espacoCartas.get(i).setIcon(casaverde);
+            espacoCartas.get(i).setText("carta" + i);
+        }
+        System.out.println("interface");
+
+    }
+    
+    public void iniciarTabuleiro(int index){
+        espacoCartas = new ArrayList<javax.swing.JLabel>();
+        Icon icone;
+        if(index == 1)
+            icone = casaverde;
+        else
+             icone = casavermelho;
+       espacoCartas.add(carta1);
+       espacoCartas.add(carta2);
+       espacoCartas.add(carta3);
+       espacoCartas.add(carta4);
+       espacoCartas.add(carta5);
+       espacoCartas.add(carta6);
+       
+        
+    }
+   
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel carta1;
     private javax.swing.JLabel carta2;
@@ -1087,4 +1133,6 @@ public class Tabuleiro extends javax.swing.JPanel {
     private javax.swing.JButton fvermelho3;
     private javax.swing.JButton fvermelho4;
     // End of variables declaration//GEN-END:variables
+
+
 }

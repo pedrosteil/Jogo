@@ -9,6 +9,6 @@ package Entidades;
  *
  * @author Pedro
  */
-class Peça {
+public class Peça {
     
 }

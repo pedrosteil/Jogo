@@ -3,16 +3,21 @@ package Entidades;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Baralho {
+public class Baralho {
 
     ArrayList<Carta> cartas = new ArrayList<Carta>();
+    ArrayList<Carta> monte = new ArrayList<Carta>();
 
+    
     public Baralho() {
+        createCartas();
+        monte = cartas;
     }
 
     public Baralho(ArrayList<Carta> cartas) {
         
         this.cartas = cartas;
+
     }
 
     public ArrayList<Carta> getCartas() {
@@ -33,16 +38,18 @@ class Baralho {
     }
     
     public ArrayList<Carta> embaralha(){
-        ArrayList<Carta> embaralhadas = cartas;
-        Collections.shuffle(embaralhadas);
-        return embaralhadas;
+       this.monte = cartas;
+        Collections.shuffle(monte);
+        return monte;
     }
     
     public ArrayList<Carta> getMao(int quantidade){
-        ArrayList<Carta> cartas = this.embaralha();
+        ArrayList<Carta> cartas = monte;
         ArrayList<Carta> mao = new ArrayList<Carta>();
-        for(int i=0; i < quantidade ; i = i++){
-            mao.add(cartas.get(i));
+        for(int i=0; i < quantidade ; i++){
+            System.out.println(i);
+            mao.add(cartas.get(0));
+            monte.remove(0);
         }
         return mao;
     }

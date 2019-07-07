@@ -4,6 +4,7 @@ package netgames;
 
 
 
+import InterfaceGrafica.AtorJogador;
 import javax.swing.JOptionPane;
 
 import br.ufsc.inf.leobr.cliente.Jogada;
@@ -18,13 +19,25 @@ public class AtorNetgames implements OuvidorProxy {
 	
 	private static final long serialVersionUID = 1L;
 	protected Proxy proxy;
+        private AtorJogador atorJogador;
+
+
 	
-	public AtorNetgames() {
+	public AtorNetgames(AtorJogador ator) {
 		super();
+                this.atorJogador = ator;
 		this.proxy = Proxy.getInstance();
 		proxy.addOuvinte(this);	
 	}
 	
+    public AtorJogador getAtorJogador() {
+        return atorJogador;
+    }
+
+    public void setAtorJogador(AtorJogador atorJogador) {
+        this.atorJogador = atorJogador;
+    }
+    
 	public String conectar(String servidor, String nome) {
 			try {
 				proxy.conectar(servidor, nome);
@@ -64,14 +77,17 @@ public class AtorNetgames implements OuvidorProxy {
 			e.printStackTrace();
 			return "Falha ao tentar enviar solicitacao de inicio enviada a Netgames Server";
 		}
+                this.iniciarNovaPartida(1);
 		return "Sucesso: solicitacao de inicio enviada a Netgames Server";
 	}
 
 	@Override
-	public void iniciarNovaPartida(Integer posicao) {
-		// TODO Auto-generated method stub
-		JOptionPane.showMessageDialog(null, "o servidor enviou solicitacao de inicio de partida e isso deve ser tratado segundo as regras do seu jogo");
-	}
+        public void iniciarNovaPartida(Integer posicao) {
+            String[] nomeJogadores = new String[2];
+            nomeJogadores[0] = proxy.getNomeJogador();
+           // nomeJogadores[1] = proxy.obterNomeAdversarios().get(0);
+            this.atorJogador.iniciarNovaPartida(posicao, nomeJogadores);
+        }
 
 	@Override
 	public void finalizarPartidaComErro(String message) {
@@ -86,6 +102,7 @@ public class AtorNetgames implements OuvidorProxy {
 
 	@Override
 	public void receberJogada(Jogada jogada) {
+            
 		// TODO Auto-generated method stub
 		
 	}

@@ -2,13 +2,35 @@ package Entidades;
 
 import java.util.ArrayList;
 
-class Jogador {
+public class Jogador {
 
     Peça[] peças; // = new Peça[4];
     ArrayList<Carta> cartas;
     int cor;
+    String nome;
+    boolean turno;
 
     public Jogador() {
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public boolean isTurno() {
+        return turno;
+    }
+
+    public void setTurno(boolean turno) {
+        this.turno = turno;
+    }
+    
+    public void inverterTurno(){
+        this.turno = !turno;
     }
 
     public Jogador(Peça[] peças, ArrayList<Carta> cartas, int cor) {

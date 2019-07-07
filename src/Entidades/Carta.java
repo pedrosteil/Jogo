@@ -1,6 +1,6 @@
 package Entidades;
 
-class Carta {
+public class Carta {
     
     int numero;
     int naipe;

@@ -1,6 +1,6 @@
 package Entidades;
 
-class Casa {
+public class Casa {
 
     Peça peça;
     int posicao;

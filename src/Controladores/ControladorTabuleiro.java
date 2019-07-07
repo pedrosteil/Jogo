@@ -1,13 +1,13 @@
 package Controladores;
 
 
-import InterfaceGrafica.Tabuleiro;
+import InterfaceGrafica.InterfaceTabuleiro;
 
 
 
 public class ControladorTabuleiro {
 
-    Tabuleiro tabuleiro;
+    InterfaceTabuleiro tabuleiro;
 
     public ControladorTabuleiro() {
     }

@@ -20,6 +20,11 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import Entidades.Baralho;
+import Entidades.Jogador;
+import Entidades.Lance;
+import Entidades.Tabuleiro;
+import netgames.AtorNetgames;
 
 /**
  *
@@ -32,17 +37,9 @@ public class ControladorTabuleiro extends javax.swing.JFrame {
 	private final Action action_1 = new ControladorTabuleiro.SwingAction_1();
 	private final Action action_2 = new ControladorTabuleiro.SwingAction_2();
 	private AtorJogador atorJogador;
-        private Baralho baralho;
-        private boolean partidaAndamento;
-        private boolean conectado;
+        private Tabuleiro tabuleiro;
 
-    public AtorJogador getAtorJogador() {
-        return atorJogador;
-    }
 
-    public void setAtorJogador(AtorJogador atorJogador) {
-        this.atorJogador = atorJogador;
-    }
 
 	/**
 	 * Launch the application.
@@ -66,6 +63,7 @@ public class ControladorTabuleiro extends javax.swing.JFrame {
     public ControladorTabuleiro() {
         initialize();
         initComponents();
+        tabuleiro = new Tabuleiro();
     }
 
     /**
@@ -83,13 +81,14 @@ public class ControladorTabuleiro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     private void initialize() {
-		atorJogador = new AtorJogador(this);		
+				
 		frame = new JFrame();
 		frame.setBounds(100, 100, 900,900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout()); 
-                Tabuleiro jPanelTabuleiro = new Tabuleiro();
-                
+                InterfaceTabuleiro jPanelTabuleiro = new InterfaceTabuleiro();
+                atorJogador = new AtorJogador(this, jPanelTabuleiro);
+                atorJogador.setNgServer(new AtorNetgames(atorJogador));
                
                 
 		JMenuBar menuBar = new JMenuBar();
@@ -115,35 +114,124 @@ public class ControladorTabuleiro extends javax.swing.JFrame {
 	}
     
     public void definirConectado(boolean valor) {
-		conectado = valor;
+		this.atorJogador.setConectado(valor);
 	}
 	
 	public boolean estaConectado() {
-		return conectado;
+		return this.atorJogador.isConectado();
 	}
 	
 	public void definirPartidaAndamento(boolean valor) {
-		partidaAndamento = valor;
+		tabuleiro.setPartidaEmAndamento(valor);
 	}
 	
 	public boolean informarPartidaAndamento() {
-		return partidaAndamento;
+		return tabuleiro.isPartidaEmAndamento();
 	}
 	
 	public boolean permitidoConectar() {
-		return !conectado;
+		return !atorJogador.isConectado();
 		// defina a lgica do seu jogo
 	}
 	
 	public boolean permitidoDesconectar() {
-		return conectado;
+		return atorJogador.isConectado();
 		// defina a lgica do seu jogo
 	}
+        
 
 	public boolean permitidoIniciarPartida() {
-		return !partidaAndamento;
+            if(atorJogador.isConectado()){
+		return !tabuleiro.isPartidaEmAndamento();
+            }
+            else
+                return false;
 		// defina a lgica do seu jogo
 	}
+        
+        public Baralho getBaralho() {
+           return tabuleiro.getBaralho();
+    }
+
+    public void setBaralho(Baralho baralho) {
+        this.tabuleiro.setBaralho(baralho);
+    }
+
+
+
+    public void setPartidaAndamento(boolean partidaAndamento) {
+        this.tabuleiro.setPartidaEmAndamento(partidaAndamento);
+    }
+
+
+    public void setConectado(boolean conectado) {
+        this.atorJogador.setConectado(conectado);
+    }
+
+    public AtorJogador getAtorJogador() {
+        return atorJogador;
+    }
+
+    public void setAtorJogador(AtorJogador atorJogador) {
+        this.atorJogador = atorJogador;
+    }
+        
+        public void iniciarPartida(){
+            if(atorJogador.isConectado()){
+                atorJogador.iniciarPartida();
+            }
+            else{
+                atorJogador.iniciarPartida();
+            }
+        }
+        
+        public void iniciarNovaPartida(int ordem, String[] nomeJogadores) {
+            if (ordem == 1) {
+                this.tabuleiro = new Tabuleiro();
+                this.tabuleiro.setBaralho(new Baralho());
+                this.tabuleiro.setJogadorLocal(new Jogador());
+                tabuleiro.getJogadorLocal().setNome(nomeJogadores[0]);
+                
+                this.tabuleiro.setJogadorRemoto(new Jogador());
+                this.tabuleiro.getJogadorRemoto().setNome(nomeJogadores[1]);
+                
+                System.out.print("EU INICIEI: " + this.tabuleiro.getJogadorLocal().getNome());
+                this.tabuleiro.setPartidaEmAndamento(true);
+                Lance lance = this.iniciarRodada(6);
+                lance.setInicioPartida(true);
+                atorJogador.setPosicao(ordem);
+                
+                tabuleiro.getJogadorLocal().setTurno(true);
+                this.tabuleiro.getJogadorRemoto().setTurno(false);
+                atorJogador.atualizarInterface(tabuleiro);
+                           
+            } else {
+                atorJogador.setPosicao(ordem);
+                atorJogador.atualizarInterface(tabuleiro);
+            }
+    }
+        
+        public Lance iniciarRodada(int rodada){
+            this.tabuleiro.getBaralho().embaralha();
+            this.tabuleiro.getJogadorLocal().inverterTurno();
+            this.tabuleiro.getJogadorLocal().setCartas(this.tabuleiro.getBaralho().getMao(rodada));
+            this.tabuleiro.getJogadorRemoto().setCartas(this.tabuleiro.getBaralho().getMao(rodada));
+            Lance lance = new Lance();
+            lance.setMao(this.tabuleiro.getJogadorRemoto().getCartas());
+            lance.setInicioRodada(true);
+            return lance;
+            
+        }
+        
+        public void  atualizarEstado(Lance lance){
+            
+        }
+        public void esvaziar(){
+           // this.baralho = null;
+            //this.jogadorLocal = null;
+//            this.jogadorRemoto = null;
+
+        }
 
  
 	private class SwingAction extends AbstractAction {
