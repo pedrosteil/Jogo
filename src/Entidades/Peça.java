@@ -5,10 +5,12 @@
  */
 package Entidades;
 
+import br.ufsc.inf.leobr.cliente.Jogada;
+
 /**
  *
  * @author Pedro
  */
-public class Peça {
+public class Peça implements Jogada{
     
 }

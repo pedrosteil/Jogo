@@ -4,7 +4,7 @@ package netgames;
 
 
 
-import DominioDoProblema.Controlador;
+import Controladores.ControladorTabuleiro;
 import Entidades.Lance;
 import Entidades.Tabuleiro;
 import InterfaceGrafica.AtorJogador;
@@ -24,20 +24,21 @@ public class AtorNetgames implements OuvidorProxy {
 	
 	private static final long serialVersionUID = 1L;
 	protected Proxy proxy;
-        private Controlador controlador;
+        private ControladorTabuleiro controlador;
 
 
 	
-	public AtorNetgames( Controlador controlador) {
+	public AtorNetgames( ControladorTabuleiro controlador) {
 		super();
 
 		this.proxy = Proxy.getInstance();
                 this.controlador = controlador;
-		proxy.addOuvinte(this);	
+		
 	}
 
     
 	public String conectar(String servidor, String nome) {
+            proxy.addOuvinte(this);	
 			try {
 				proxy.conectar(servidor, nome);
 			} catch (JahConectadoException e) {
@@ -71,7 +72,7 @@ public class AtorNetgames implements OuvidorProxy {
 	public String iniciarPartida() {
 		try {
 			proxy.iniciarPartida(new Integer(2)); // supondo 2 jogadores, o que pode ser alterado
-                        return "enviado";
+                        return "Solicitacao enviada";
 		} catch (NaoConectadoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -86,7 +87,6 @@ public class AtorNetgames implements OuvidorProxy {
             nomeJogadores[0] = proxy.getNomeJogador();
             
             nomeJogadores[1] = proxy.obterNomeAdversarios().get(0);
-            this.receberMensagem(nomeJogadores[0] + nomeJogadores[1]);
             this.controlador.iniciarNovaPartida(posicao, nomeJogadores);
         }
 
@@ -106,6 +106,7 @@ public class AtorNetgames implements OuvidorProxy {
 	@Override
         public void receberJogada(Jogada jogada) {
             Tabuleiro tabuleiro = (Tabuleiro) jogada;
+            this.controlador.atualizarEstado(tabuleiro);
             this.receberMensagem("jogada recebida");
  
 	}
@@ -118,7 +119,8 @@ public class AtorNetgames implements OuvidorProxy {
 
         public void enviaJogada(Tabuleiro tabuleiro) {
         try {
-            proxy.enviaJogada(tabuleiro);
+            Jogada jogada = (Jogada) tabuleiro;
+            proxy.enviaJogada(tabuleiro);      
             this.receberMensagem("jogada enviada");
         } catch (NaoJogandoException ex) {
             this.receberMensagem(ex.getMessage());

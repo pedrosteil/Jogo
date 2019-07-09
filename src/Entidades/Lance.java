@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author Carol
  */
 public class Lance implements Jogada{
-    Peca peca;
+    Peça peca;
     Carta carta;
     String destinoPeca;
     boolean inicioRodada;
@@ -40,11 +40,11 @@ public class Lance implements Jogada{
         this.inicioPartida = setInicioPartida;
     }
 
-    public Peca getPeca() {
+    public Peça getPeca() {
         return peca;
     }
 
-    public void setPeca(Peca peca) {
+    public void setPeca(Peça peca) {
         this.peca = peca;
     }
 

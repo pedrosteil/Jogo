@@ -1,16 +1,41 @@
 package Entidades;
 
+import br.ufsc.inf.leobr.cliente.Jogada;
 import java.util.ArrayList;
 
-public class Jogador {
+public class Jogador implements Jogada {
 
-    Peça[] peças; // = new Peça[4];
+    Peça[] peças =  new Peça[4];
     ArrayList<Carta> cartas;
-    int cor;
+    int cor = 0;
     String nome;
     boolean turno;
+    Carta cartaEscolhida;
+    Lance lance;
+
+    public Lance getLance() {
+        return lance;
+    }
+
+    public void setLance(Lance lance) {
+        this.lance = lance;
+    }
+
+    public Carta getCartaEscolhida() {
+        return cartaEscolhida;
+    }
+
+    public void setCartaEscolhida(Carta cartaEscolhida) {
+        this.cartaEscolhida = cartaEscolhida;
+        
+    }
 
     public Jogador() {
+    }
+
+    public Jogador(int cor, String nome) {
+        this.cor = cor;
+        this.nome = nome;
     }
 
     public String getNome() {
@@ -62,6 +87,7 @@ public class Jogador {
     public void setCor(int cor) {
         this.cor = cor;
     }
+    
     
     
 }

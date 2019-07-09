@@ -1,8 +1,9 @@
 package Entidades;
 
+import br.ufsc.inf.leobr.cliente.Jogada;
 import javax.swing.Icon;
 
-public class Carta {
+public class Carta implements Jogada{
     
     int numero;
     int naipe;

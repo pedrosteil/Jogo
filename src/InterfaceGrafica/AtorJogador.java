@@ -2,7 +2,8 @@ package InterfaceGrafica;
 
 
 
-import DominioDoProblema.Controlador;
+import Controladores.ControladorTabuleiro;
+import DominioDoProblema.ElementoDominioProblema;
 import Entidades.Lance;
 import Entidades.Tabuleiro;
 import br.ufsc.inf.leobr.cliente.Jogada;
@@ -13,16 +14,25 @@ public class AtorJogador {
     /**
      *
      */
-    private Controlador controladorTabuleiro;
+    private ControladorTabuleiro controladorTabuleiro;
     private JPanelTabuleiro interfaceTabuleiro;
     private boolean conectado;
-    int posicao;
+    private int ordem;
 
+    public int getOrdem() {
+        return ordem;
+    }
 
-    public AtorJogador(Controlador controladorTabuleiro) {
+    public void setOrdem(int ordem) {
+        this.ordem = ordem;
+    }
+
+ 
+
+    public AtorJogador(ControladorTabuleiro controladorTabuleiro) {
 		
                 this.controladorTabuleiro = controladorTabuleiro;
-                this.interfaceTabuleiro = new JPanelTabuleiro(this);
+                this.interfaceTabuleiro = new JPanelTabuleiro();
                 this.interfaceTabuleiro.setAtor(this);
 	}
     public String solictarEnderecoServidor() {
@@ -33,23 +43,16 @@ public class AtorJogador {
         return this.interfaceTabuleiro.solicitarNomeJogador();
     }
 
-    public Controlador getControladorTabuleiro() {
+    public ControladorTabuleiro getControladorTabuleiro() {
         return controladorTabuleiro;
     }
     
     public void atualizarInterface(Tabuleiro tabuleiro){
-        this.interfaceTabuleiro.atualizarInterface(tabuleiro, posicao);
+        this.interfaceTabuleiro.atualizarInterface(tabuleiro);
     }
 
-    public int getPosicao() {
-        return posicao;
-    }
 
-    public void setPosicao(int posicao) {
-        this.posicao = posicao;
-    }
-
-    public void setControladorTabuleiro(Controlador controladorTabuleiro) {
+    public void setControladorTabuleiro(ControladorTabuleiro controladorTabuleiro) {
         this.controladorTabuleiro = controladorTabuleiro;
     }
 
@@ -74,10 +77,10 @@ public class AtorJogador {
     }
 
         
-        public void iniciarNovaPartida(int posicao, String[] nomeJogadores) {
+        public void iniciarNovaPartida(int posicao, String[] nomeJogadores, AtorNetgames netgames) {
                 controladorTabuleiro.iniciarNovaPartida(posicao, nomeJogadores);
     }
-        
+
         public String conectar(String servidor, String nome){
             return controladorTabuleiro.conectar(servidor, nome);
         }
@@ -89,5 +92,12 @@ public class AtorJogador {
         public String iniciarPartida(){
             return controladorTabuleiro.iniciarPartida();
         }
-
+        
+        public void notificar(String mensagem){
+            this.interfaceTabuleiro.notificar(mensagem);
+        }
+        
+        public void moverPecaInicio(String string){
+            controladorTabuleiro.moverPecaInicio( string);
+        }
 }

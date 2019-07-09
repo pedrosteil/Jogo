@@ -1,14 +1,16 @@
 package Entidades;
 
-public class Casa {
+import br.ufsc.inf.leobr.cliente.Jogada;
+
+public class Casa implements Jogada {
 
     Peça peça;
-    int posicao;
+    String posicao;
 
     public Casa() {
     }
 
-    public Casa(Peça peça, int posicao) {
+    public Casa(Peça peça, String posicao) {
         this.peça = peça;
         this.posicao = posicao;
     }
@@ -21,11 +23,11 @@ public class Casa {
         this.peça = peça;
     }
 
-    public int getPosicao() {
+    public String getPosicao() {
         return posicao;
     }
 
-    public void setPosicao(int posicao) {
+    public void setPosicao(String posicao) {
         this.posicao = posicao;
     }
     

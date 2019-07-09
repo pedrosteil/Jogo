@@ -3,7 +3,6 @@ package InterfaceGrafica;
 import Entidades.Carta;
 import Entidades.Jogador;
 import Entidades.Tabuleiro;
-import java.awt.EventQueue;
 import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.JButton;
@@ -21,23 +20,18 @@ import javax.swing.JButton;
  * @author Carol
  */
 public class JPanelTabuleiro extends javax.swing.JPanel {
-    
-    
 
     Icon casaverde = new javax.swing.ImageIcon(getClass().getResource("verde.png"));
     Icon casavermelho = new javax.swing.ImageIcon(getClass().getResource("vermelho.png"));
     ArrayList<javax.swing.JButton> espacoCartas;
     AtorJogador ator;
+    Icon icone;
+    Icon iconeOponente;
     /**
      * Creates new form NewJPanel
      */
-    
-    public JPanelTabuleiro(AtorJogador ator) {
-        
-        this.ator = ator;
-
+    public JPanelTabuleiro() {
         initComponents();
-        iniciarTabuleiro(1);
     }
     
     
@@ -985,42 +979,43 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
 
     private void cvermelho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvermelho1ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaInicio("cvermelho1");
     }//GEN-LAST:event_cvermelho1ActionPerformed
 
     private void cvermelho2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvermelho2ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaInicio("cvermelho2");
     }//GEN-LAST:event_cvermelho2ActionPerformed
 
     private void cvermelho3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvermelho3ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaInicio("cvermelho3");
     }//GEN-LAST:event_cvermelho3ActionPerformed
 
     private void cvermelho4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvermelho4ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+        moverPecaInicio("cvermelho4");
     }//GEN-LAST:event_cvermelho4ActionPerformed
 
     private void cverde1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cverde1ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+        
+         moverPecaInicio("cverde1");
     }//GEN-LAST:event_cverde1ActionPerformed
 
     private void cverde2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cverde2ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaInicio("cverde2");
     }//GEN-LAST:event_cverde2ActionPerformed
 
     private void cverde3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cverde3ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+         moverPecaInicio("cverde3");
     }//GEN-LAST:event_cverde3ActionPerformed
 
     private void cverde4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cverde4ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaInicio("cverde4");
     }//GEN-LAST:event_cverde4ActionPerformed
 
     private void carta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carta1ActionPerformed
@@ -1040,6 +1035,11 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     public void setAtor(AtorJogador ator) {
         this.ator = ator;
     }
+    
+    public void moverPecaInicio(String casa ){
+        ator.moverPecaInicio(casa);
+    }
+
     
     
     private void selecionarCarta(JButton carta){
@@ -1061,35 +1061,59 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         return JOptionPane.showInputDialog(this, "Digite o Nome do Jogador:");
     }
     
-    public void atualizarInterface(Tabuleiro tabuleiro, int indexjogador){
-        Jogador jogador = null;
+    public void atualizarInterface(Tabuleiro tabuleiro){
+        Jogador jogador;
+        Jogador jogador2;
         Icon icone;
-        iniciarTabuleiro(indexjogador);
-        if(indexjogador == 2){
-            icone = casaverde;
+        if(tabuleiro.getJogadorLocal().getCor() == ator.getOrdem()){
             jogador = tabuleiro.getJogadorLocal();
+            jogador2 = tabuleiro.getJogadorRemoto();
+            
+        }
+        else{ 
+            jogador = tabuleiro.getJogadorRemoto();
+            jogador2 = tabuleiro.getJogadorLocal();
+
+        }
+        //coloca as pecas na posicao inicial
+        if(tabuleiro.getRodada() == 1)
+             iniciarTabuleiro(tabuleiro);
+        ArrayList<Carta> cartas = jogador.getCartas();
+        for(int i =0; i < espacoCartas.size(); i++){
+            if(i < cartas.size() )
+                espacoCartas.get(i).setText("" + cartas.get(i).getNumero());
+            else 
+                espacoCartas.get(i).setText("");
+        }
+        
+        if(jogador.getCartaEscolhida() != null){
+            descarte.setText("" + jogador.getCartaEscolhida().getNumero());
+        }
+        else if(jogador2.getCartaEscolhida() != null)
+            descarte.setText("" + jogador2.getCartaEscolhida().getNumero());
+    }
+    
+    public void iniciarTabuleiro(Tabuleiro tabuleiro){
+        espacoCartas = new ArrayList<javax.swing.JButton>();
+        if(tabuleiro.getJogadorLocal().getCor() == ator.getOrdem()){
+            icone = casaverde;
+            iconeOponente = casavermelho;
             
         }
         else{
             icone = casavermelho;
-            jogador = tabuleiro.getJogadorRemoto();
-        } 
-        ArrayList<Carta> cartas = jogador.getCartas();
-        for(int i =0; i < espacoCartas.size(); i++){
-            
-            espacoCartas.get(i).setText("carta " + cartas.get(i).getNumero());
+            iconeOponente = casavermelho;  
         }
-        System.out.println("interface");
-
-    }
-    
-    public void iniciarTabuleiro(int index){
-        espacoCartas = new ArrayList<javax.swing.JButton>();
-        Icon icone;
-        if(index == 2)
-            icone = casaverde;
-        else
-             icone = casavermelho;
+        icone = casaverde;
+            cverde1.setIcon(icone);
+            cverde2.setIcon(icone);
+            cverde3.setIcon(icone);
+            cverde4.setIcon(icone);
+        icone = casavermelho;
+            cvermelho1.setIcon(icone);
+            cvermelho2.setIcon(icone);
+            cvermelho3.setIcon(icone);
+            cvermelho4.setIcon(icone);
        espacoCartas.add(carta1);
        espacoCartas.add(carta2);
        espacoCartas.add(carta3);
@@ -1098,6 +1122,10 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
        espacoCartas.add(carta6);
        
         
+    }
+    
+    public void notificar(String mensagem){
+        JOptionPane.showMessageDialog(this, mensagem);
     }
    
     

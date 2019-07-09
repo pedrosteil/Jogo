@@ -1,9 +1,10 @@
 package Entidades;
 
+import br.ufsc.inf.leobr.cliente.Jogada;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Baralho {
+public class Baralho implements Jogada{
 
     ArrayList<Carta> cartas = new ArrayList<Carta>();
     ArrayList<Carta> monte = new ArrayList<Carta>();

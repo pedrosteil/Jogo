@@ -5,26 +5,16 @@ import java.util.ArrayList;
 
 public class Tabuleiro implements Jogada {
 
-    ArrayList<Casa> casas;
+
     Jogador jogadorLocal;
     Jogador jogadorRemoto;
     Baralho baralho;
     boolean partidaEmAndamento = false;
     Jogador vencedor = null;
-    ArrayList<Peça> peças;
-
-    public Tabuleiro() {
-    }
-
-    public Tabuleiro(ArrayList<Casa> casas, Jogador jogador1, Jogador jogador2, Baralho baralho, boolean partidaEmAndamento, Jogador vencedor, ArrayList<Peça> peças) {
-        this.casas = casas;
-        this.jogadorLocal = jogador1;
-        this.jogadorRemoto = jogador2;
-        this.baralho = baralho;
-        this.partidaEmAndamento = partidaEmAndamento;
-        this.vencedor = vencedor;
-        this.peças = peças;
-    }
+    int rodada;
+    ArrayList<Casa> casas = null;
+    ArrayList<Casa> casasInicioVerde = null;
+    ArrayList<Casa> casasInicioVermelho = null;
 
     public ArrayList<Casa> getCasas() {
         return casas;
@@ -34,12 +24,47 @@ public class Tabuleiro implements Jogada {
         this.casas = casas;
     }
 
+    public ArrayList<Casa> getCasasInicioVerde() {
+        return casasInicioVerde;
+    }
+
+    public void setCasasInicioVerde(ArrayList<Casa> casasInicioVerde) {
+        this.casasInicioVerde = casasInicioVerde;
+    }
+
+    public ArrayList<Casa> getCasasInicioVermelho() {
+        return casasInicioVermelho;
+    }
+
+    public void setCasasInicioVermelho(ArrayList<Casa> casasInicioVermelho) {
+        this.casasInicioVermelho = casasInicioVermelho;
+    }
+    
+
+    public int getRodada() {
+        return rodada;
+    }
+
+    public void setRodada(int rodada) {
+        this.rodada = rodada;
+    }
+
+
+    public Tabuleiro() {
+    }
+
+
+
     public Jogador getJogadorLocal() {
         return jogadorLocal;
     }
 
     public void setJogadorLocal(Jogador jogadorLocal) {
         this.jogadorLocal = jogadorLocal;
+        Peça[] peca = this.jogadorLocal.getPeças();
+        for(int i =0; i<peca.length ; i++)
+            casasInicioVerde.get(i).setPeça(peca[i]);
+        
     }
 
     public Jogador getJogadorRemoto() {
@@ -48,6 +73,9 @@ public class Tabuleiro implements Jogada {
 
     public void setJogadorRemoto(Jogador jogadorRemoto) {
         this.jogadorRemoto = jogadorRemoto;
+         Peça[] peca = this.jogadorRemoto.getPeças();
+        for(int i =0; i<peca.length ; i++)
+            casasInicioVerde.get(i).setPeça(peca[i]);
     }
 
   
@@ -75,15 +103,27 @@ public class Tabuleiro implements Jogada {
     public void setVencedor(Jogador vencedor) {
         this.vencedor = vencedor;
     }
-
-    public ArrayList<Peça> getPeças() {
-        return peças;
-    }
-
-    public void setPeças(ArrayList<Peça> peças) {
-        this.peças = peças;
-    }
     
+    public void iniciarTabuleiro(){
+        for(int i = 0; i< 32; i++){
+            casas.add(new Casa(null, "" + i));
+        }
+        for(int i =1; i<5; i++){
+            casasInicioVerde.add(new Casa(null, "cverde" + i));
+        }
+          for(int i =1; i<5; i++){
+            casasInicioVermelho.add(new Casa(null, "cvernelho" + i));
+        }
+          for(int i =1; i<5; i++){
+            casas.add(new Casa(null, "fverde" + i));
+        }
+           for(int i =1; i<5; i++){
+            casas.add(new Casa(null, "fvernelho" + i));
+        }
+            
+    }
+
+     
     
     
 }
