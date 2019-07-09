@@ -3,8 +3,10 @@ package Controladores;
 
 import Entidades.Baralho;
 import Entidades.Carta;
+import Entidades.Casa;
 import Entidades.Jogador;
 import Entidades.Lance;
+import Entidades.Peça;
 import Entidades.Tabuleiro;
 import InterfaceGrafica.AtorJogador;
 
@@ -203,8 +205,51 @@ public class ControladorTabuleiro {
            
         }
         
-        public void moverPecaInicio(String string){
+        public boolean moverPecaInicio(String casaEscolhida){
+            Jogador jogador = null;
+            ArrayList<Casa> casas;
+            if(this.tabuleiro.getJogadorLocal().getCor() == atorJogador.getOrdem()){               
+                jogador = this.tabuleiro.getJogadorLocal();
+                casas = this.tabuleiro.getCasasInicioVerde();
+               
+            }
+            else {
+                jogador = this.tabuleiro.getJogadorRemoto();
+                casas = this.tabuleiro.getCasasInicioVermelho();
+            }
             
+            Casa casa = null;
+            if(jogador.isTurno())  {  
+                if(jogador.getCartaEscolhida() != null){
+                    if(jogador.getCartaEscolhida().getNumero() == 1 || jogador.getCartaEscolhida().getNumero() == 13){
+                        for(int i = 0; i< casas.size() ; i++){
+                            if(casas.get(i).getPosicao() == casaEscolhida){
+                              if( casas.get(i).getPeça() != null){
+                                  atorJogador.notificar("Não há peças na casa selecionada");
+                                     return false;
+                                 }
+                              else{
+                                  casa = casas.get(i);
+                                 break;
+                                }
+                            }
+                        }
+                        jogador.setLance(new Lance());
+                        jogador.getLance().setPecaEscolhida(true);
+                        jogador.getLance().setPeca(casa.getPeça());
+                        jogador.getLance().setDestinoPeca("1");
+                    }
+                    
+                }
+                    
+                 this.netgames.enviaJogada(this.tabuleiro);
+                 this.atorJogador.atualizarInterface(this.tabuleiro);
+                 return true;
+            }
+            else{
+                atorJogador.notificar("Vez do oponente");
+                   return false;
+            }
         }
         
         public void  atualizarEstado(Tabuleiro tabuleiro){

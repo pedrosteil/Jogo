@@ -1038,6 +1038,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     
     public void moverPecaInicio(String casa ){
         ator.moverPecaInicio(casa);
+        
     }
 
     
