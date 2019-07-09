@@ -2,36 +2,28 @@ package InterfaceGrafica;
 
 
 
-import DominioDoProblema.ElementoDominioProblema;
+import DominioDoProblema.Controlador;
 import Entidades.Lance;
 import Entidades.Tabuleiro;
 import br.ufsc.inf.leobr.cliente.Jogada;
 import netgames.AtorNetgames;
 
 public class AtorJogador {
-	
-	protected AtorNetgames ngServer;
 
     /**
      *
      */
-    private ControladorTabuleiro controladorTabuleiro;
-    private InterfaceTabuleiro interfaceTabuleiro;
+    private Controlador controladorTabuleiro;
+    private JPanelTabuleiro interfaceTabuleiro;
     private boolean conectado;
     int posicao;
 
-    public AtorNetgames getNgServer() {
-        return ngServer;
-    }
 
-    public void setNgServer(AtorNetgames ngServer) {
-        this.ngServer = ngServer;
-    }
-
-    public AtorJogador(ControladorTabuleiro controladorTabuleiro, InterfaceTabuleiro interfaceTabuleiro) {
+    public AtorJogador(Controlador controladorTabuleiro) {
 		
                 this.controladorTabuleiro = controladorTabuleiro;
-                this.interfaceTabuleiro = interfaceTabuleiro;
+                this.interfaceTabuleiro = new JPanelTabuleiro(this);
+                this.interfaceTabuleiro.setAtor(this);
 	}
     public String solictarEnderecoServidor() {
         return this.interfaceTabuleiro.solictarEnderecoServidor();
@@ -41,7 +33,7 @@ public class AtorJogador {
         return this.interfaceTabuleiro.solicitarNomeJogador();
     }
 
-    public ControladorTabuleiro getControladorTabuleiro() {
+    public Controlador getControladorTabuleiro() {
         return controladorTabuleiro;
     }
     
@@ -57,7 +49,7 @@ public class AtorJogador {
         this.posicao = posicao;
     }
 
-    public void setControladorTabuleiro(ControladorTabuleiro controladorTabuleiro) {
+    public void setControladorTabuleiro(Controlador controladorTabuleiro) {
         this.controladorTabuleiro = controladorTabuleiro;
     }
 
@@ -69,60 +61,33 @@ public class AtorJogador {
         this.conectado = conectado;
     }
 
-    public String conectar(String servidor, String nomeJogador) {
-		String mensagem = "Condicao para conexao nao atendida (defina qual)";
-		boolean permitido = controladorTabuleiro.permitidoConectar();
-		if (permitido) {
-			mensagem = ngServer.conectar(servidor, nomeJogador);
-			if (mensagem.equals("Sucesso: conectado a Netgames Server")) {
-				controladorTabuleiro.definirConectado(true);
-                                this.conectado = true;
-			}
-		}
-		return mensagem;
-	}
-	
-	public String desconectar() {
-		String mensagem = "Condicao para desconexao nao atendida (defina qual)";
-		boolean permitido = controladorTabuleiro.permitidoDesconectar();
-		if (permitido) {
-			mensagem = ngServer.desconectar();
-			if (mensagem.equals("Sucesso: desconectado de Netgames Server")) {
-				controladorTabuleiro.definirConectado(false);
-			}
-		}
-		return mensagem;
-	}
-	
-	public String iniciarPartida() {
-             
-		String mensagem = "Condicao para iniciar partida nao atendida (defina qual)";
-		boolean permitido = controladorTabuleiro.estaConectado();
-               
-		if (permitido) {
-			permitido = controladorTabuleiro.informarPartidaAndamento();
-                        if(!permitido){
-                            mensagem = ngServer.iniciarPartida();
-                            return mensagem;
-                        }
-                        else{
-                            mensagem = "Partida em andamento";
-                            return mensagem;
-                        }
-		}
-                else{
-                    mensagem = "Você nao esta conectado";
-                }
-		return mensagem;
-	}
-        
-        public void receberJogada(){
-            ngServer.receberJogada(null);
-        }
-        
+    public void selecionarCarta(String carta){
+        controladorTabuleiro.selecionarCarta(carta);
+    }
+
+    public JPanelTabuleiro getInterfaceTabuleiro() {
+        return interfaceTabuleiro;
+    }
+
+    public void setInterfaceTabuleiro(JPanelTabuleiro interfaceTabuleiro) {
+        this.interfaceTabuleiro = interfaceTabuleiro;
+    }
+
         
         public void iniciarNovaPartida(int posicao, String[] nomeJogadores) {
                 controladorTabuleiro.iniciarNovaPartida(posicao, nomeJogadores);
     }
+        
+        public String conectar(String servidor, String nome){
+            return controladorTabuleiro.conectar(servidor, nome);
+        }
+        
+        public String desconectar(){
+            return controladorTabuleiro.desconectar();
+        }
+        
+        public String iniciarPartida(){
+            return controladorTabuleiro.iniciarPartida();
+        }
 
 }

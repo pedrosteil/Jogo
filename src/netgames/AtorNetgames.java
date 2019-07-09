@@ -4,7 +4,11 @@ package netgames;
 
 
 
+import DominioDoProblema.Controlador;
+import Entidades.Lance;
+import Entidades.Tabuleiro;
 import InterfaceGrafica.AtorJogador;
+import InterfaceGrafica.JFrametabuleiro;
 import javax.swing.JOptionPane;
 
 import br.ufsc.inf.leobr.cliente.Jogada;
@@ -13,30 +17,25 @@ import br.ufsc.inf.leobr.cliente.Proxy;
 import br.ufsc.inf.leobr.cliente.exception.ArquivoMultiplayerException;
 import br.ufsc.inf.leobr.cliente.exception.JahConectadoException;
 import br.ufsc.inf.leobr.cliente.exception.NaoConectadoException;
+import br.ufsc.inf.leobr.cliente.exception.NaoJogandoException;
 import br.ufsc.inf.leobr.cliente.exception.NaoPossivelConectarException;
 
 public class AtorNetgames implements OuvidorProxy {
 	
 	private static final long serialVersionUID = 1L;
 	protected Proxy proxy;
-        private AtorJogador atorJogador;
+        private Controlador controlador;
 
 
 	
-	public AtorNetgames(AtorJogador ator) {
+	public AtorNetgames( Controlador controlador) {
 		super();
-                this.atorJogador = ator;
+
 		this.proxy = Proxy.getInstance();
+                this.controlador = controlador;
 		proxy.addOuvinte(this);	
 	}
-	
-    public AtorJogador getAtorJogador() {
-        return atorJogador;
-    }
 
-    public void setAtorJogador(AtorJogador atorJogador) {
-        this.atorJogador = atorJogador;
-    }
     
 	public String conectar(String servidor, String nome) {
 			try {
@@ -72,25 +71,28 @@ public class AtorNetgames implements OuvidorProxy {
 	public String iniciarPartida() {
 		try {
 			proxy.iniciarPartida(new Integer(2)); // supondo 2 jogadores, o que pode ser alterado
+                        return "enviado";
 		} catch (NaoConectadoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return "Falha ao tentar enviar solicitacao de inicio enviada a Netgames Server";
 		}
-                this.iniciarNovaPartida(1);
-		return "Sucesso: solicitacao de inicio enviada a Netgames Server";
+          
 	}
 
 	@Override
         public void iniciarNovaPartida(Integer posicao) {
             String[] nomeJogadores = new String[2];
             nomeJogadores[0] = proxy.getNomeJogador();
-           // nomeJogadores[1] = proxy.obterNomeAdversarios().get(0);
-            this.atorJogador.iniciarNovaPartida(posicao, nomeJogadores);
+            
+            nomeJogadores[1] = proxy.obterNomeAdversarios().get(0);
+            this.receberMensagem(nomeJogadores[0] + nomeJogadores[1]);
+            this.controlador.iniciarNovaPartida(posicao, nomeJogadores);
         }
 
 	@Override
 	public void finalizarPartidaComErro(String message) {
+            this.receberMensagem(message);
 		// TODO Auto-generated method stub
 		
 	}
@@ -98,13 +100,14 @@ public class AtorNetgames implements OuvidorProxy {
 	@Override
 	public void receberMensagem(String msg) {
 		// TODO Auto-generated method stub
+            JOptionPane.showMessageDialog(this.controlador.getAtorJogador().getInterfaceTabuleiro(), msg);
 	}
 
 	@Override
-	public void receberJogada(Jogada jogada) {
-            
-		// TODO Auto-generated method stub
-		
+        public void receberJogada(Jogada jogada) {
+            Tabuleiro tabuleiro = (Tabuleiro) jogada;
+            this.receberMensagem("jogada recebida");
+ 
 	}
 
 	@Override
@@ -113,9 +116,19 @@ public class AtorNetgames implements OuvidorProxy {
 		
 	}
 
+        public void enviaJogada(Tabuleiro tabuleiro) {
+        try {
+            proxy.enviaJogada(tabuleiro);
+            this.receberMensagem("jogada enviada");
+        } catch (NaoJogandoException ex) {
+            this.receberMensagem(ex.getMessage());
+        }
+    }
+
 	@Override
 	public void tratarPartidaNaoIniciada(String message) {
 		// TODO Auto-generated method stub
+             this.receberMensagem(message);
 		
 	}
 	

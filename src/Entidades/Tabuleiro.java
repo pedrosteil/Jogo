@@ -1,8 +1,9 @@
 package Entidades;
 
+import br.ufsc.inf.leobr.cliente.Jogada;
 import java.util.ArrayList;
 
-public class Tabuleiro {
+public class Tabuleiro implements Jogada {
 
     ArrayList<Casa> casas;
     Jogador jogadorLocal;

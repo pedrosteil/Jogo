@@ -19,7 +19,16 @@ public class Lance implements Jogada{
     boolean inicioRodada;
     boolean pecaEscolhida;
     boolean cartaEscolhida;
+
+    public Tabuleiro getTabuleiro() {
+        return tabuleiro;
+    }
+
+    public void setTabuleiro(Tabuleiro tabuleiro) {
+        this.tabuleiro = tabuleiro;
+    }
     boolean inicioPartida;
+    Tabuleiro tabuleiro;
     ArrayList<Carta> mao;
     int cor;
 

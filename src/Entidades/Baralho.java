@@ -31,7 +31,7 @@ public class Baralho {
     private void createCartas(){
         for( int naipe = 0; naipe < 4; naipe++){
             for(int i= 1; i < 14; i++ ){
-                Carta carta = new Carta(i, naipe);
+                Carta carta = new Carta(i, naipe, null);
                 cartas.add(carta);
             }
         }
