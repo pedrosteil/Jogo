@@ -41,6 +41,7 @@ public class AtorNetgames implements OuvidorProxy {
             proxy.addOuvinte(this);	
 			try {
 				proxy.conectar(servidor, nome);
+                                this.controlador.definirConectado(); 
 			} catch (JahConectadoException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -54,18 +55,21 @@ public class AtorNetgames implements OuvidorProxy {
 				e.printStackTrace();
 				return "Voce esqueceu o arquivo de propriedades";
 			}
-			return "Sucesso: conectado a Netgames Server";
+                        return "Sucesso: conectado a Netgames Server";
+			
 		
 	}
 
 	public String desconectar() {
 			try {
 				proxy.desconectar();
+                                
 			} catch (NaoConectadoException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				return "Voce nao esta conectado";
 			}
+                        this.controlador.definirDesconectado();
 			return "Sucesso: desconectado de Netgames Server";
 	}
 
@@ -85,7 +89,6 @@ public class AtorNetgames implements OuvidorProxy {
         public void iniciarNovaPartida(Integer posicao) {
             String[] nomeJogadores = new String[2];
             nomeJogadores[0] = proxy.getNomeJogador();
-            
             nomeJogadores[1] = proxy.obterNomeAdversarios().get(0);
             this.controlador.iniciarNovaPartida(posicao, nomeJogadores);
         }
@@ -93,6 +96,7 @@ public class AtorNetgames implements OuvidorProxy {
 	@Override
 	public void finalizarPartidaComErro(String message) {
             this.receberMensagem(message);
+            this.controlador.encerrarPartidaLocalmente();
 		// TODO Auto-generated method stub
 		
 	}
@@ -113,6 +117,8 @@ public class AtorNetgames implements OuvidorProxy {
 
 	@Override
 	public void tratarConexaoPerdida() {
+            this.controlador.encerrarPartidaLocalmente();
+            this.receberMensagem("A Conexão foi perdida");
 		// TODO Auto-generated method stub
 		
 	}

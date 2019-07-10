@@ -107,6 +107,7 @@ public class ControladorTabuleiro {
 		// defina a lgica do seu jogo
 	}
         
+        
         public Baralho getBaralho() {
            return tabuleiro.getBaralho();
     }
@@ -134,7 +135,7 @@ public class ControladorTabuleiro {
         this.atorJogador = atorJogador;
     }
         
-          public String conectar(String servidor, String nome){
+        public String conectar(String servidor, String nome){
             return netgames.conectar(servidor, nome);
         }
         
@@ -142,9 +143,32 @@ public class ControladorTabuleiro {
             return netgames.desconectar();
         }
         
+                
         public String iniciarPartida(){
-            return netgames.iniciarPartida();
+            if(this.permitidoIniciarPartida())
+                return netgames.iniciarPartida();
+            else if (this.informarPartidaAndamento()){
+                this.encerrarPartidaLocalmente();
+                return netgames.iniciarPartida();
+            }
+            else
+                return "Você não está conectado";
         }
+        
+        
+        public void encerrarPartidaLocalmente(){
+            this.tabuleiro = new Tabuleiro();
+            this.definirPartidaAndamento(false);
+        }
+        
+        public void definirConectado(){
+                this.atorJogador.setConectado(true);
+}
+        
+        public void definirDesconectado(){
+            this.atorJogador.setConectado(false);
+        }
+        
        //instancia os elementos da partida, o jogador de ordem 1 sera tratado como local, e o 2 como remoto
         public void iniciarNovaPartida(int ordem, String[] nomeJogadores) {
             if (ordem == 1) {         
@@ -154,9 +178,7 @@ public class ControladorTabuleiro {
                 this.tabuleiro.setJogadorRemoto(new Jogador(2, nomeJogadores[1]));
                 this.tabuleiro.setPartidaEmAndamento(true); 
                 this.tabuleiro.setRodada(1);
-                this.iniciarRodada(6);                           
-                this.tabuleiro.getJogadorLocal().setTurno(true);
-                this.tabuleiro.getJogadorRemoto().setTurno(false);
+                this.iniciarRodada(1);                           
                 this.netgames.enviaJogada(varTab);
                 this.atorJogador.setOrdem(ordem); 
                 atorJogador.atualizarInterface(varTab);
@@ -170,7 +192,7 @@ public class ControladorTabuleiro {
 //inicia a rodada, distruibindo as cartas
         public void iniciarRodada(int rodada){
               //sempre que for rodadas pares o jogador 1 começa
-            if(rodada%2 == 0){
+            if(rodada%2 == 0 && rodada != 1){
                 this.tabuleiro.getJogadorLocal().setTurno(false);
                 this.tabuleiro.getJogadorRemoto().setTurno(true);
             }
@@ -197,63 +219,127 @@ public class ControladorTabuleiro {
         
         
         
-        public void selecionarCarta(String carta){
+        public boolean selecionarCarta(String carta){
             Jogador jogador = null;
             ArrayList<Carta> cartas;
+            if(!this.atorJogador.isConectado())
+                return false;
+            else if(!this.informarPartidaAndamento())
+                return false;
+            else if(carta == ""){
+                this.atorJogador.notificar("nao ha carta");
+                return false;
+            }
+            
             if(this.tabuleiro.getJogadorLocal().getCor() == atorJogador.getOrdem()){               
                 jogador = this.tabuleiro.getJogadorLocal();
             }
             else {
                 jogador = this.tabuleiro.getJogadorRemoto();
             }
-                
-            if(jogador.isTurno())  {  
-                cartas = jogador.getCartas();
-            
-                for(int i =0 ; i< cartas.size(); i++){
-                    Carta cartaMao = cartas.get(i);
-                    if(cartaMao.getNumero() == Integer.parseInt(carta)){
-                         jogador.setCartaEscolhida(cartaMao);
-                         jogador.getCartas().remove(i);
+  
+            if(jogador.isTurno() && jogador.getCartaEscolhida() == null)  {  
+                    cartas = jogador.getCartas();
+                    if(this.tabuleiro.pecasNoInicio(jogador.getCor())){
+                        boolean possui = false;
+                        for(int i=0; i<cartas.size(); i++){
+                            if(cartas.get(i).getNumero() == 1 || cartas.get(i).getNumero() == 13)
+                                possui = true;
+                        }       
+                        if(possui == false){
+                            jogador.descartarMao();
+                            this.tabuleiro.inverterTurno();
+                            this.atorJogador.notificar("Você não possui cartas para entrar em jogo, cartas descartadas");
+                            this.atorJogador.atualizarInterface(tabuleiro);
+                            this.netgames.enviaJogada(tabuleiro);
+                            return false;
+                        }
+                        else if(!carta.equalsIgnoreCase("1") && !carta.equalsIgnoreCase("13")){
+                                this.atorJogador.notificar("Selecione uma carta de saida");
+                                return false;
+                            }
+                        }
+
+                    for(int i =0 ; i< cartas.size(); i++){
+                        Carta cartaMao = cartas.get(i);
+                        if(cartaMao.getNumero() == Integer.parseInt(carta)){
+                             jogador.setCartaEscolhida(cartaMao);
+                             jogador.getCartas().remove(i);
+                        }
+
                     }
-                    
+                     this.netgames.enviaJogada(this.tabuleiro);
+                     this.atorJogador.atualizarInterface(this.tabuleiro);
+                     return true;
                 }
-                 this.netgames.enviaJogada(this.tabuleiro);
-                 this.atorJogador.atualizarInterface(this.tabuleiro);
-            }
-            else
-                atorJogador.notificar("Vez do oponente");
-               
-           
+                else{
+                    atorJogador.notificar("Vez do oponente");
+                    return false;
+                }
+       
         }
         
-        public void moverPecaInicio(String casaEscolhida){
+        public boolean moverPecaInicio(String casaEscolhida){
+            
+            if(!this.atorJogador.isConectado())
+                return false;
+            else if(!this.tabuleiro.isPartidaEmAndamento())
+                return false;
+            
+            
             Jogador jogador;
             if(this.tabuleiro.getJogadorLocal().getCor() == this.atorJogador.getOrdem()){
                 jogador = this.tabuleiro.getJogadorLocal();
             }
             else
                 jogador = this.tabuleiro.getJogadorRemoto();
+            
+            
             Carta carta = jogador.getCartaEscolhida();
-            if(carta.getNumero() == 1 || carta.getNumero() == 13){
+            if(carta == null && jogador.isTurno()){
+                this.atorJogador.notificar("Selecione uma carta");
+                return false;
+            }
+            else if(!jogador.isTurno()){
+                this.atorJogador.notificar("Vez do oponente");
+                return false;
+            }
+            else if(carta.getNumero() == 1 || carta.getNumero() == 13){
                  ArrayList<String> posicaoPecas = this.tabuleiro.getPosicaoPecas();
                 for( int i = 0; i<posicaoPecas.size(); i++){
-                    if(posicaoPecas.get(i).equals(casaEscolhida)){
-                       String novaPosicao = this.moverPeca(casaEscolhida, carta.getNumero(), jogador.getCor());
+                    System.out.println(posicaoPecas.get(i) + "" + casaEscolhida);
+                    if(posicaoPecas.get(i).equalsIgnoreCase(casaEscolhida)){
+                       String novaPosicao = this.moverPeca(casaEscolhida, carta.getNumero(), this.atorJogador.getOrdem());
+                       System.out.println(novaPosicao);
                        if(novaPosicao != null){
                            posicaoPecas.set(i, novaPosicao);
                            this.tabuleiro.setPosicaoPecas(posicaoPecas);
+                           this.tabuleiro.inverterTurno();
+                           jogador.setCartaEscolhida(null);
                            netgames.enviaJogada(tabuleiro);
                            this.atorJogador.atualizarInterface(this.tabuleiro);
+                           return true;
                        }
-                    }
+                     
+                    } 
+               }
             }
-           
-                    
-            }
-            else
+
                 this.atorJogador.notificar("Peça nao pode ser movida");
+            return false;
      
+        }
+        
+        public boolean verifificarEncerramento(){
+            if( this.tabuleiro.pecasNaCasaFinal(1)){
+                this.tabuleiro.setVencedor(this.tabuleiro.getJogadorLocal());
+                return true;
+            }
+            else if(this.tabuleiro.pecasNaCasaFinal(2)){
+                this.tabuleiro.setVencedor(this.tabuleiro.getJogadorRemoto());
+                return true;
+            }
+            return false;
         }
         
         public void  atualizarEstado(Tabuleiro tabuleiro){
@@ -263,9 +349,9 @@ public class ControladorTabuleiro {
         }
         
         public String moverPeca(String casa, int numero, int jogador){
-            if((casa.equals("cverde1") || casa.equals("cverde2") || casa.equals("cverde3") ||casa.equals("cverde4")) && (numero == 1 || numero == 13) && jogador == 1)
+            if((casa.equals("cverde1") || casa.equals("cverde2") || casa.equals("cverde3") ||casa.equals("cverde4")) && (numero == 1 || numero == 13) && jogador == 1 )
                 return "casa1";
-            if((casa.equals("cvermelho1") || casa.equals("cvermelho2") || casa.equals("cvermelho3") ||casa.equals("cvermelho4")) && (numero == 1 || numero == 13) && jogador == 2)
+            else if((casa.equals("cvermelho1") || casa.equals("cvermelho2") || casa.equals("cvermelho3") ||casa.equals("cvermelho4")) && (numero == 1 || numero == 13)  && jogador == 2)
                 return "casa17";
             else if(casa.contains("casa")){
                int casadestino = Integer.parseInt(casa.substring(4));

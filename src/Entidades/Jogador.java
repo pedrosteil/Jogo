@@ -9,9 +9,18 @@ public class Jogador implements Jogada {
     ArrayList<Carta> cartas;
     int cor = 0;
     String nome;
-    boolean turno;
-    Carta cartaEscolhida;
+    boolean turno = false;
+    Carta cartaEscolhida = null;
     Lance lance;
+    boolean descartado = false;
+
+    public boolean isDescartado() {
+        return descartado;
+    }
+
+    public void setDescartado(boolean descartado) {
+        this.descartado = descartado;
+    }
 
     public Lance getLance() {
         return lance;
@@ -77,6 +86,7 @@ public class Jogador implements Jogada {
     }
 
     public void setCartas(ArrayList<Carta> cartas) {
+        this.descartado = false;
         this.cartas = cartas;
     }
 
@@ -86,6 +96,11 @@ public class Jogador implements Jogada {
 
     public void setCor(int cor) {
         this.cor = cor;
+    }
+    
+    public void descartarMao(){
+        this.cartas = null;
+        this.descartado = true;
     }
     
     

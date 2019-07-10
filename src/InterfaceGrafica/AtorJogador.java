@@ -18,7 +18,7 @@ public class AtorJogador {
     //passa os comandos da interface par ao controle e vice-versa
     private ControladorTabuleiro controladorTabuleiro;
     private JPanelTabuleiro interfaceTabuleiro;
-    private boolean conectado;
+    private boolean conectado = false;
     private int ordem;
 
     public int getOrdem() {

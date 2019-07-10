@@ -47,7 +47,53 @@ public class Tabuleiro implements Jogada {
     public void setPosicaoPecas(ArrayList<String> posicaoPecas) {
         this.posicaoPecas = posicaoPecas;
     }
+    
+    public void inverterTurno(){
+        if(this.jogadorLocal.isDescartado()){
+            this.jogadorLocal.setTurno(false);
+            this.jogadorRemoto.setTurno(true);
+        }
+        else if(this.jogadorRemoto.isDescartado()){
+            this.jogadorLocal.setTurno(true);
+            this.jogadorRemoto.setTurno(false);
+        }
+        else{
+            this.jogadorLocal.inverterTurno();
+            this.jogadorRemoto.inverterTurno();
+        }
+    }
 
+    public boolean pecasNaCasaFinal( int jogador){
+        String casa;
+        if(jogador == 1){
+            casa = "fverde";
+        }
+        else
+            casa = "fvermelho";
+        for(int i = 0; i < jogador*4; i++){
+            if(this.posicaoPecas.get(i).contains(casa))
+                continue;
+            else
+                return false;
+        }
+        return true;
+    }
+    
+    public boolean pecasNoInicio( int jogador){
+        String casa;
+        if(jogador == 1){
+            casa = "cverde";
+        }
+        else
+            casa = "cvermelho";
+        for(int i = jogador*4 - 4 ; i < jogador*4; i++){
+            if(this.posicaoPecas.get(i).contains(casa))
+                continue;
+            else
+                return false;
+        }
+        return true;
+    }
 
 
 
