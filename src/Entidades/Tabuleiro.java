@@ -175,7 +175,7 @@ public class Tabuleiro implements Jogada {
         
         for(int i = 4*jogador - 4; i < jogador*4; i++){
             String posicao = posicaoPecas.get(i);
-            System.out.println(posicao);
+          //  System.out.println(posicao);
                 if(posicao.contains("casa")){
                     return true;
                 }
@@ -184,7 +184,7 @@ public class Tabuleiro implements Jogada {
                 }
                 else if(posicao.contains("f" + casa)){
                     int numeroposicao = Integer.parseInt(posicao.substring(casa.length()+1));
-                    System.out.println("numero" + numeroposicao + "carta" + carta);
+                   // System.out.println("numero" + numeroposicao + "carta" + carta);
                     if((numeroposicao + carta) <= 4);
                         return true;
             }

@@ -269,7 +269,7 @@ public class ControladorTabuleiro {
                     if(!movimento){
                         jogador.descartarMao();
                             this.tabuleiro.inverterTurno();  
-                            this.atorJogador.notificar("Suas cartas nao podem movimentar pecas, cartas descartadas");
+                            
                             this.getNovaRodada();
                             this.atorJogador.atualizarInterface(tabuleiro);
                             this.netgames.enviaJogada(tabuleiro);
@@ -427,7 +427,7 @@ public class ControladorTabuleiro {
                             return false;
                         
                        String novaPosicao = this.moverPeca(casaEscolhida, carta.getNumero(), jogador.getCor());
-                       this.atorJogador.notificar(novaPosicao);
+                      
                        if(novaPosicao != null){                    
                            posicaoPecas.set(i, novaPosicao);
                            this.tabuleiro.setPosicaoPecas(posicaoPecas);
@@ -549,8 +549,9 @@ public class ControladorTabuleiro {
         
         
     
-        public void  atualizarEstado(Tabuleiro tabuleiro){
+        public void  atualizarEstado(Tabuleiro tabuleiro){          
             this.tabuleiro = tabuleiro;
+            verificarEncerramento();
             this.getNovaRodada();
             this.atorJogador.atualizarInterface(tabuleiro);
             

@@ -1253,7 +1253,9 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         if(tabuleiro.getRodada() == 1)
              iniciarTabuleiro(tabuleiro);
         
-        
+        if(tabuleiro.getVencedor() != null){
+            JOptionPane.showMessageDialog(this, "Jogador " + tabuleiro.getVencedor().getNome() + "venceu a partida"  );
+        }
         //atualiza a interface de cartas de cada jogador 
         ArrayList<Carta> cartas = jogador.getCartas();
         for(int i =0; i < espacoCartas.size(); i++){
