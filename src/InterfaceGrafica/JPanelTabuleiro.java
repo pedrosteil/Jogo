@@ -23,7 +23,10 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
 
     Icon casaverde = new javax.swing.ImageIcon(getClass().getResource("verde.png"));
     Icon casavermelho = new javax.swing.ImageIcon(getClass().getResource("vermelho.png"));
-    ArrayList<javax.swing.JButton> espacoCartas;
+    Icon vazio = new javax.swing.ImageIcon(getClass().getResource("vazio.png"));
+    
+     ArrayList<javax.swing.JButton> casasTabuleiro;
+     ArrayList<javax.swing.JButton> espacoCartas;
     AtorJogador ator;
     Icon icone;
     Icon iconeOponente;
@@ -103,6 +106,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(185, 122, 87));
 
+        casa1.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 0), 3));
         casa1.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -112,6 +116,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa2.setPreferredSize(new java.awt.Dimension(50, 50));
         casa2.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +125,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa3.setPreferredSize(new java.awt.Dimension(50, 50));
         casa3.addActionListener(new java.awt.event.ActionListener() {
@@ -128,6 +134,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa4.setPreferredSize(new java.awt.Dimension(50, 50));
         casa4.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +143,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa5.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa5.setPreferredSize(new java.awt.Dimension(50, 50));
         casa5.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +152,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa6.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa6.setPreferredSize(new java.awt.Dimension(50, 50));
         casa6.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +161,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa7.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa7.setPreferredSize(new java.awt.Dimension(50, 50));
         casa7.addActionListener(new java.awt.event.ActionListener() {
@@ -160,6 +170,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa8.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa8.setPreferredSize(new java.awt.Dimension(50, 50));
         casa8.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +179,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa9.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa9.setPreferredSize(new java.awt.Dimension(50, 50));
         casa9.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +188,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa10.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa10.setPreferredSize(new java.awt.Dimension(50, 50));
         casa10.addActionListener(new java.awt.event.ActionListener() {
@@ -184,6 +197,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa11.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa11.setPreferredSize(new java.awt.Dimension(50, 50));
         casa11.addActionListener(new java.awt.event.ActionListener() {
@@ -192,6 +206,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa12.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa12.setPreferredSize(new java.awt.Dimension(50, 50));
         casa12.addActionListener(new java.awt.event.ActionListener() {
@@ -200,6 +215,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa13.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa13.setPreferredSize(new java.awt.Dimension(50, 50));
         casa13.addActionListener(new java.awt.event.ActionListener() {
@@ -208,6 +224,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa14.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa14.setPreferredSize(new java.awt.Dimension(50, 50));
         casa14.addActionListener(new java.awt.event.ActionListener() {
@@ -216,6 +233,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa15.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa15.setPreferredSize(new java.awt.Dimension(50, 50));
         casa15.addActionListener(new java.awt.event.ActionListener() {
@@ -224,6 +242,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa16.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa16.setPreferredSize(new java.awt.Dimension(50, 50));
         casa16.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +251,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa17.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 3));
         casa17.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -241,6 +261,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa18.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa18.setPreferredSize(new java.awt.Dimension(50, 50));
         casa18.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +270,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa19.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa19.setPreferredSize(new java.awt.Dimension(50, 50));
         casa19.addActionListener(new java.awt.event.ActionListener() {
@@ -257,6 +279,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa20.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa20.setPreferredSize(new java.awt.Dimension(50, 50));
         casa20.addActionListener(new java.awt.event.ActionListener() {
@@ -265,6 +288,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa21.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa21.setPreferredSize(new java.awt.Dimension(50, 50));
         casa21.addActionListener(new java.awt.event.ActionListener() {
@@ -273,6 +297,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa22.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa22.setPreferredSize(new java.awt.Dimension(50, 50));
         casa22.addActionListener(new java.awt.event.ActionListener() {
@@ -281,6 +306,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa23.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa23.setPreferredSize(new java.awt.Dimension(50, 50));
         casa23.addActionListener(new java.awt.event.ActionListener() {
@@ -289,6 +315,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa24.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa24.setPreferredSize(new java.awt.Dimension(50, 50));
         casa24.addActionListener(new java.awt.event.ActionListener() {
@@ -297,6 +324,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa25.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa25.setPreferredSize(new java.awt.Dimension(50, 50));
         casa25.addActionListener(new java.awt.event.ActionListener() {
@@ -305,6 +333,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa26.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa26.setPreferredSize(new java.awt.Dimension(50, 50));
         casa26.addActionListener(new java.awt.event.ActionListener() {
@@ -313,6 +342,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa27.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa27.setPreferredSize(new java.awt.Dimension(50, 50));
         casa27.addActionListener(new java.awt.event.ActionListener() {
@@ -321,6 +351,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa28.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa28.setPreferredSize(new java.awt.Dimension(50, 50));
         casa28.addActionListener(new java.awt.event.ActionListener() {
@@ -329,6 +360,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa29.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa29.setPreferredSize(new java.awt.Dimension(50, 50));
         casa29.addActionListener(new java.awt.event.ActionListener() {
@@ -337,6 +369,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa30.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa30.setPreferredSize(new java.awt.Dimension(50, 50));
         casa30.addActionListener(new java.awt.event.ActionListener() {
@@ -345,6 +378,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa31.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa31.setPreferredSize(new java.awt.Dimension(50, 50));
         casa31.addActionListener(new java.awt.event.ActionListener() {
@@ -353,6 +387,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        casa32.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         casa32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         casa32.setPreferredSize(new java.awt.Dimension(50, 50));
         casa32.addActionListener(new java.awt.event.ActionListener() {
@@ -361,6 +396,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fverde1.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fverde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fverde1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         fverde1.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -370,6 +406,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fverde2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fverde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fverde2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         fverde2.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -379,6 +416,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fverde3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fverde3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fverde3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         fverde3.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -388,6 +426,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fverde4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fverde4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fverde4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         fverde4.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -397,6 +436,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fvermelho1.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fvermelho1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fvermelho1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         fvermelho1.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -406,6 +446,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fvermelho2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fvermelho2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fvermelho2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         fvermelho2.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -415,6 +456,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fvermelho3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fvermelho3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fvermelho3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         fvermelho3.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -424,6 +466,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        fvermelho4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         fvermelho4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         fvermelho4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         fvermelho4.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -433,6 +476,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cvermelho1.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cvermelho1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cvermelho1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         cvermelho1.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -442,6 +486,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cvermelho2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cvermelho2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cvermelho2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         cvermelho2.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -451,6 +496,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cvermelho3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cvermelho3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cvermelho3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         cvermelho3.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -460,6 +506,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cvermelho4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cvermelho4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cvermelho4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true));
         cvermelho4.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -469,6 +516,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cverde1.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cverde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cverde1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         cverde1.setFocusCycleRoot(true);
@@ -479,6 +527,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cverde2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cverde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cverde2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         cverde2.setFocusCycleRoot(true);
@@ -489,6 +538,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cverde3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cverde3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cverde3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         cverde3.setFocusCycleRoot(true);
@@ -499,6 +549,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
+        cverde4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
         cverde4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
         cverde4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 51), 3, true));
         cverde4.setFocusCycleRoot(true);
@@ -1036,24 +1087,32 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         this.ator = ator;
     }
     
+    
+    //metodo implementado nas casas iniciais
     public void moverPecaInicio(String casa ){
         ator.moverPecaInicio(casa);
         
     }
 
     
-    
+    //metodo implementado nos campos de carta
     private void selecionarCarta(JButton carta){
         ator.selecionarCarta(carta.getText());
     }
+    
+    //ainda n tem utilidade, apenas coloca as bolinhas nos botoes clicacos
     private void setPecaCasa(JButton casa){
        casa.setIcon(casaverde); 
     }
+    
     
     private Icon getPecaCasa (JButton casa){
        return casa.getIcon();
       }
 
+    
+    
+    //aqui q o endereco e definido
     public String solictarEnderecoServidor() {
         return JOptionPane.showInputDialog(this, "Digite o Endereço do servidor:", "netgames.labsoft.ufsc.br");
     }
@@ -1062,6 +1121,8 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         return JOptionPane.showInputDialog(this, "Digite o Nome do Jogador:");
     }
     
+    
+    //metodo que recebe o tabuleiro atual, e com base nele modifica os elementos da interface (coloca as cartas, mexe as casas e etc)
     public void atualizarInterface(Tabuleiro tabuleiro){
         Jogador jogador;
         Jogador jogador2;
@@ -1076,9 +1137,12 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             jogador2 = tabuleiro.getJogadorLocal();
 
         }
-        //coloca as pecas na posicao inicial
+        //instancia os arrays necessarios para atualizar cartas e casas
         if(tabuleiro.getRodada() == 1)
              iniciarTabuleiro(tabuleiro);
+        
+        
+        //atualiza a interface de cartas de cada jogador 
         ArrayList<Carta> cartas = jogador.getCartas();
         for(int i =0; i < espacoCartas.size(); i++){
             if(i < cartas.size() )
@@ -1092,10 +1156,37 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         }
         else if(jogador2.getCartaEscolhida() != null)
             descarte.setText("" + jogador2.getCartaEscolhida().getNumero());
+        
+        
+        
+        //vai varrer o array posicoespeca do tabuleiro e atualizar a interface com as casas ocupadas
+        ArrayList<String> posicoes = tabuleiro.getPosicaoPecas();
+        
+            
+            for(JButton casa : this.casasTabuleiro){
+                for(int i = 0; i < posicoes.size(); i++){
+                casa.setIcon(vazio);
+                System.out.println(casa.getText() + posicoes.get(i));
+                System.out.println(casa.getText().equals(posicoes.get(i)));
+                if(casa.getText().equalsIgnoreCase(posicoes.get(i))){
+                    
+                    //as primeiras quatro pecas do array sao do jogador verde
+                    if(i < 4)
+                        casa.setIcon(casaverde);
+                    //as outras sao do jogador vermelho
+                    else
+                        casa.setIcon(casavermelho);
+                    break;
+                }   
+            }
+        }
     }
     
+    
+    //inicia algumas variaveis para usar na interface
     public void iniciarTabuleiro(Tabuleiro tabuleiro){
         espacoCartas = new ArrayList<javax.swing.JButton>();
+        casasTabuleiro = new ArrayList<javax.swing.JButton>();
         if(tabuleiro.getJogadorLocal().getCor() == ator.getOrdem()){
             icone = casaverde;
             iconeOponente = casavermelho;
@@ -1121,6 +1212,106 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
        espacoCartas.add(carta4);
        espacoCartas.add(carta5);
        espacoCartas.add(carta6);
+          
+       casasTabuleiro.add(casa1);
+       casasTabuleiro.add(casa2);
+       casasTabuleiro.add(casa3);
+       casasTabuleiro.add(casa4);
+       casasTabuleiro.add(casa5);
+       casasTabuleiro.add(casa6);
+       casasTabuleiro.add(casa7);
+       casasTabuleiro.add(casa8);
+       casasTabuleiro.add(casa9);
+       casasTabuleiro.add(casa10);
+       casasTabuleiro.add(casa11);
+       casasTabuleiro.add(casa12);
+       casasTabuleiro.add(casa13);
+       casasTabuleiro.add(casa14);
+       casasTabuleiro.add(casa15);
+       casasTabuleiro.add(casa16);
+       casasTabuleiro.add(casa17);
+       casasTabuleiro.add(casa18);
+       casasTabuleiro.add(casa19);
+       casasTabuleiro.add(casa20);
+       casasTabuleiro.add(casa21);
+       casasTabuleiro.add(casa22);
+       casasTabuleiro.add(casa23);
+       casasTabuleiro.add(casa24);
+       casasTabuleiro.add(casa25);
+       casasTabuleiro.add(casa26);
+       casasTabuleiro.add(casa27);
+       casasTabuleiro.add(casa28);
+       casasTabuleiro.add(casa29);
+       casasTabuleiro.add(casa30);
+       casasTabuleiro.add(casa31);
+       casasTabuleiro.add(casa32);
+       casasTabuleiro.add(cverde1);
+       casasTabuleiro.add(cverde2);
+       casasTabuleiro.add(cverde3);
+       casasTabuleiro.add(cverde4);
+       casasTabuleiro.add(cvermelho1);
+       casasTabuleiro.add(cvermelho2);
+       casasTabuleiro.add(cvermelho3);
+       casasTabuleiro.add(cvermelho4);
+       casasTabuleiro.add(fverde1);
+       casasTabuleiro.add(fverde2);
+       casasTabuleiro.add(fverde3);
+       casasTabuleiro.add(fverde4);
+       casasTabuleiro.add(fvermelho1);
+       casasTabuleiro.add(fvermelho2);
+       casasTabuleiro.add(fvermelho3);
+       casasTabuleiro.add(fvermelho4);
+   
+       casa1.setText("casa1");
+       casa2.setText("casa2");
+       casa3.setText("casa3");
+       casa4.setText("casa4");
+       casa5.setText("casa5");
+       casa6.setText("casa6");
+       casa7.setText("casa7");
+       casa8.setText("casa8");
+       casa9.setText("casa9");
+       casa10.setText("casa10");
+       casa11.setText("casa11");
+       casa12.setText("casa12");
+       casa13.setText("casa13");
+       casa14.setText("casa14");
+       casa15.setText("casa15");
+       casa16.setText("casa16");
+       casa17.setText("casa17");
+       casa18.setText("casa18");
+       casa19.setText("casa19");
+       casa20.setText("casa20");
+       casa21.setText("casa21");
+       casa22.setText("casa22");
+       casa23.setText("casa23");
+       casa24.setText("casa24");
+       casa25.setText("casa25");
+       casa26.setText("casa26");
+       casa27.setText("casa27");
+       casa28.setText("casa28");
+       casa29.setText("casa29");
+       casa30.setText("casa30");
+       casa31.setText("casa31");
+       casa32.setText("casa32");
+       cverde1.setText("cverde1");
+       cverde2.setText("cverde2");
+       cverde3.setText("cverde3");
+       cverde4.setText("cverde4");
+       cvermelho1.setText("cvermelho1");
+       cvermelho2.setText("cvermelho2");
+       cvermelho3.setText("cvermelho3");
+       cvermelho4.setText("cvermelho4");
+       fverde1.setText("fverde1");
+       fverde2.setText("fverde2");
+       fverde3.setText("fverde3");
+       fverde4.setText("fverde4");
+       fvermelho1.setText("fvermelho1");
+       fvermelho2.setText("fvermelho2");
+       fvermelho3.setText("fvermelho3");
+       fvermelho4.setText("fvermelho4");
+
+      
        
         
     }

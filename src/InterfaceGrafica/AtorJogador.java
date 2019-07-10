@@ -3,7 +3,6 @@ package InterfaceGrafica;
 
 
 import Controladores.ControladorTabuleiro;
-import DominioDoProblema.ElementoDominioProblema;
 import Entidades.Lance;
 import Entidades.Tabuleiro;
 import br.ufsc.inf.leobr.cliente.Jogada;
