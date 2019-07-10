@@ -11,6 +11,8 @@ import br.ufsc.inf.leobr.cliente.Jogada;
  *
  * @author Pedro
  */
+
+//sem uso
 public class Peça implements Jogada{
     
 }

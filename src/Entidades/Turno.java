@@ -1,5 +1,7 @@
 package Entidades;
 
+
+//nao usado
 public class Turno {
     
     Jogador jogador;

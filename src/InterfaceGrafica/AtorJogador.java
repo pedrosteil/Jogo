@@ -13,6 +13,9 @@ public class AtorJogador {
     /**
      *
      */
+    
+    // o ator jogador é o intermediario entre o controlador e a interface;
+    //passa os comandos da interface par ao controle e vice-versa
     private ControladorTabuleiro controladorTabuleiro;
     private JPanelTabuleiro interfaceTabuleiro;
     private boolean conectado;

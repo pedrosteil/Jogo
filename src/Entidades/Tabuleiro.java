@@ -3,6 +3,8 @@ package Entidades;
 import br.ufsc.inf.leobr.cliente.Jogada;
 import java.util.ArrayList;
 
+
+//funciona como um estado atual, é com base no tabuleiro e seus jogadores q o programa sabera qual é o estado atual
 public class Tabuleiro implements Jogada {
 
 

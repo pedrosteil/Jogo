@@ -31,6 +31,13 @@ import netgames.AtorNetgames;
  *
  * @author Carol
  */
+
+
+//uma janela contendo o panel do tabuleiro (sera instanciado pelo atorjogador)
+//responsavel por iniciar o programa, atraves do metodo main
+//instancia um controlador, que por sua vez instancia os atores
+//essa classe entao pega o ator jogador do controlador, que contem o panel a ser incluido no frame
+//
 public class JFrametabuleiro extends javax.swing.JFrame {
 
 	JFrame frame;
@@ -38,8 +45,7 @@ public class JFrametabuleiro extends javax.swing.JFrame {
 	private final Action action_1 = new JFrametabuleiro.SwingAction_1();
 	private final Action action_2 = new JFrametabuleiro.SwingAction_2();
 	private AtorJogador atorJogador;
-        private Tabuleiro tabuleiro;
-        private AtorNetgames netgames;
+
 
 
 
@@ -90,7 +96,11 @@ public class JFrametabuleiro extends javax.swing.JFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout());               
                   
+                
+                //cria o controlador tabuleiro, o controlador tabuleiro instancia o netgames  eum jogador local
                 ControladorTabuleiro controlador = new ControladorTabuleiro( );
+                
+                //a interface se comunicara com o atorjogador, pega sua instancia do controlador
                 atorJogador = controlador.getAtorJogador();
                
                 
@@ -115,108 +125,6 @@ public class JFrametabuleiro extends javax.swing.JFrame {
                 
                 frame.getContentPane().add(atorJogador.getInterfaceTabuleiro(), BorderLayout.CENTER);
 	}
-    
-    public void definirConectado(boolean valor) {
-		this.atorJogador.setConectado(valor);
-	}
-	
-	public boolean estaConectado() {
-		return this.atorJogador.isConectado();
-	}
-	
-	public void definirPartidaAndamento(boolean valor) {
-		tabuleiro.setPartidaEmAndamento(valor);
-	}
-	
-	public boolean informarPartidaAndamento() {
-		return tabuleiro.isPartidaEmAndamento();
-	}
-	
-	public boolean permitidoConectar() {
-		return !atorJogador.isConectado();
-		// defina a lgica do seu jogo
-	}
-	
-	public boolean permitidoDesconectar() {
-		return atorJogador.isConectado();
-		// defina a lgica do seu jogo
-	}
-        
-
-	public boolean permitidoIniciarPartida() {
-            if(atorJogador.isConectado()){
-		return !tabuleiro.isPartidaEmAndamento();
-            }
-            else
-                return false;
-		// defina a lgica do seu jogo
-	}
-        
-        public Baralho getBaralho() {
-           return tabuleiro.getBaralho();
-    }
-
-    public void setBaralho(Baralho baralho) {
-        this.tabuleiro.setBaralho(baralho);
-    }
-
-
-
-    public void setPartidaAndamento(boolean partidaAndamento) {
-        this.tabuleiro.setPartidaEmAndamento(partidaAndamento);
-    }
-
-
-    public void setConectado(boolean conectado) {
-        this.atorJogador.setConectado(conectado);
-    }
-
-    public AtorJogador getAtorJogador() {
-        return atorJogador;
-    }
-
-    public void setAtorJogador(AtorJogador atorJogador) {
-        this.atorJogador = atorJogador;
-    }
-        
-        public void iniciarPartida(){
-            if(atorJogador.isConectado()){
-                netgames.iniciarPartida();
-            }
-            else{
-                netgames.iniciarPartida();
-            }
-        }
-        
-   
-        
-
-        public void iniciarRodada(int rodada){
-            this.tabuleiro.getBaralho().embaralha();
-            this.tabuleiro.getJogadorLocal().inverterTurno();
-            this.tabuleiro.getJogadorLocal().setCartas(this.tabuleiro.getBaralho().getMao(rodada));
-            this.tabuleiro.getJogadorRemoto().setCartas(this.tabuleiro.getBaralho().getMao(rodada));
-            
-            
-        }
-        
-        public void selecionarCarta(String carta){
-            Lance lance = new Lance();{
-            lance.setTabuleiro(tabuleiro);
-            lance.setCartaEscolhida(true);
-            netgames.enviaJogada(tabuleiro);
-        }
-        }
-        
-        public void  atualizarEstado(Lance lance){
-            
-        }
-        public void esvaziar(){
-           // this.baralho = null;
-            //this.jogadorLocal = null;
-//            this.jogadorRemoto = null;
-
-        }
 
  
 	private class SwingAction extends AbstractAction {

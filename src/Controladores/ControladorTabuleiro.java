@@ -15,6 +15,11 @@ import Entidades.Tabuleiro;
 import java.util.ArrayList;
 
 
+//o controlador se comunica com o atorjogador e netgames
+//recebe e envia solcitacoes do netgames
+//envia os estados atuais para a interface via atorjogador
+//manipula as entidades, especialmente o tabuleiro que eh enviado para o jogador adversario como jogada
+
 
 public class ControladorTabuleiro {
 

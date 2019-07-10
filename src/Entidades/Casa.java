@@ -2,6 +2,8 @@ package Entidades;
 
 import br.ufsc.inf.leobr.cliente.Jogada;
 
+
+//ate o momento n esta sendo usada
 public class Casa implements Jogada {
 
     Peça peça;

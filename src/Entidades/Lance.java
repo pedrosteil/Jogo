@@ -12,6 +12,8 @@ import java.util.ArrayList;
  *
  * @author Carol
  */
+
+//n esta sendo usado, o tabuleiro cumpre esse papel
 public class Lance implements Jogada{
     Peça peca;
     Carta carta;
