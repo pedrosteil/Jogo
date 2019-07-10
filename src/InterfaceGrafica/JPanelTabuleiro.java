@@ -107,6 +107,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         peca = new javax.swing.JLabel();
         turno = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(185, 122, 87));
 
@@ -618,6 +619,13 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
 
         jLabel1.setText("Ultimo descarte:");
 
+        jButton1.setText("Descartar Carta");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -721,7 +729,11 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
                                             .addComponent(casa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(0, 0, Short.MAX_VALUE)
                                             .addComponent(casa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)))))))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButton1)
+                                            .addGap(30, 30, 30)))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -845,22 +857,28 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
                         .addGap(383, 383, 383)
                         .addComponent(casa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(casa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(99, 99, 99))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(casa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(casa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(47, 47, 47))
-                        .addComponent(casa5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(casa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(casa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(99, 99, 99))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(casa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(casa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(47, 47, 47))
+                                .addComponent(casa5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(casa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(83, 83, 83)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(notificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(peca)
@@ -1047,42 +1065,42 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
 
     private void fverde1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fverde1ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+         moverPecaFim("fverde1");
     }//GEN-LAST:event_fverde1ActionPerformed
 
     private void fverde2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fverde2ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+         moverPecaFim("fverde2");
     }//GEN-LAST:event_fverde2ActionPerformed
 
     private void fverde3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fverde3ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaFim("fverde3");
     }//GEN-LAST:event_fverde3ActionPerformed
 
     private void fverde4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fverde4ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaFim("fverde4");
     }//GEN-LAST:event_fverde4ActionPerformed
 
     private void fvermelho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fvermelho1ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaFim("fvermelho1");
     }//GEN-LAST:event_fvermelho1ActionPerformed
 
     private void fvermelho2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fvermelho2ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+         moverPecaFim("fvermelho2");
     }//GEN-LAST:event_fvermelho2ActionPerformed
 
     private void fvermelho3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fvermelho3ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+         moverPecaFim("fvermelho3");
     }//GEN-LAST:event_fvermelho3ActionPerformed
 
     private void fvermelho4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fvermelho4ActionPerformed
         // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
+          moverPecaFim("fvermelho4");
     }//GEN-LAST:event_fvermelho4ActionPerformed
 
     private void cvermelho1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvermelho1ActionPerformed
@@ -1156,6 +1174,11 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
          selecionarCarta(carta6);
     }//GEN-LAST:event_carta6ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.ator.descartar();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public AtorJogador getAtor() {
         return ator;
     }
@@ -1171,6 +1194,11 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         ator.moverPecaInicio(casa);
         
     }
+    
+    public void moverPecaFim(String casa){
+        
+    }
+           
 
     
     //metodo implementado nos campos de carta
@@ -1466,6 +1494,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     private javax.swing.JButton fvermelho2;
     private javax.swing.JButton fvermelho3;
     private javax.swing.JButton fvermelho4;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel notificacao;
     private javax.swing.JLabel peca;

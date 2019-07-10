@@ -45,6 +45,7 @@ public class Baralho implements Jogada{
     }
     
     public ArrayList<Carta> getMao(int quantidade){
+        this.embaralha();
         ArrayList<Carta> cartas = monte;
         ArrayList<Carta> mao = new ArrayList<Carta>();
         for(int i=0; i < quantidade ; i++){

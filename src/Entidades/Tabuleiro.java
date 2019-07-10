@@ -79,6 +79,23 @@ public class Tabuleiro implements Jogada {
         return true;
     }
     
+    public boolean pecasIniciouOuFinal(int jogador){
+       
+        String casa;
+        if(jogador == 1){
+            casa = "verde";
+        }
+        else
+            casa = "vermelho";
+        for(int i = 0; i < jogador*4; i++){
+            if(this.posicaoPecas.get(i).contains(casa))
+                continue;
+            else
+                return false;
+        }
+        return true;
+    }
+    
     public boolean pecasNoInicio( int jogador){
         String casa;
         if(jogador == 1){
@@ -158,6 +175,7 @@ public class Tabuleiro implements Jogada {
         
         for(int i = 4*jogador - 4; i < jogador*4; i++){
             String posicao = posicaoPecas.get(i);
+            System.out.println(posicao);
                 if(posicao.contains("casa")){
                     return true;
                 }
@@ -166,7 +184,8 @@ public class Tabuleiro implements Jogada {
                 }
                 else if(posicao.contains("f" + casa)){
                     int numeroposicao = Integer.parseInt(posicao.substring(casa.length()+1));
-                    if(numeroposicao + carta <= 4);
+                    System.out.println("numero" + numeroposicao + "carta" + carta);
+                    if((numeroposicao + carta) <= 4);
                         return true;
             }
         }
@@ -175,12 +194,14 @@ public class Tabuleiro implements Jogada {
     
     
     public boolean podeIniciarNovaRodada(){
-        System.out.println(this.getJogadorLocal().getCartas() + " " + this.getJogadorRemoto().getCartas());
+        //System.out.println(this.getJogadorLocal().getCartas() + " " + this.getJogadorRemoto().getCartas());
             if(this.getJogadorLocal().getCartas() == null && this.getJogadorRemoto().getCartas() == null) 
                 return true;
             else
                 return false;
         }
+    
+    
     
         
 }

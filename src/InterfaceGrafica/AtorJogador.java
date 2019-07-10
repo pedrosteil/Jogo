@@ -77,6 +77,10 @@ public class AtorJogador {
     public void setInterfaceTabuleiro(JPanelTabuleiro interfaceTabuleiro) {
         this.interfaceTabuleiro = interfaceTabuleiro;
     }
+    
+    public void descartar(){
+        this.controladorTabuleiro.descartar();
+    }
 
         
         public void iniciarNovaPartida(int posicao, String[] nomeJogadores, AtorNetgames netgames) {
