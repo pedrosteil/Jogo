@@ -102,4 +102,8 @@ public class AtorJogador {
         public void moverPecaInicio(String string){
             controladorTabuleiro.moverPecaInicio( string);
         }
+        
+        public void moverPecaEmJogo(String casa){
+            controladorTabuleiro.moverPecaEmJogo(casa);
+        }
 }

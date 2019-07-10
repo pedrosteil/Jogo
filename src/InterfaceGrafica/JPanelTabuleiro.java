@@ -49,37 +49,37 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     private void initComponents() {
 
         casa1 = new javax.swing.JButton();
-        casa2 = new javax.swing.JButton();
-        casa3 = new javax.swing.JButton();
-        casa4 = new javax.swing.JButton();
-        casa5 = new javax.swing.JButton();
-        casa6 = new javax.swing.JButton();
-        casa7 = new javax.swing.JButton();
-        casa8 = new javax.swing.JButton();
-        casa9 = new javax.swing.JButton();
-        casa10 = new javax.swing.JButton();
-        casa11 = new javax.swing.JButton();
-        casa12 = new javax.swing.JButton();
-        casa13 = new javax.swing.JButton();
-        casa14 = new javax.swing.JButton();
-        casa15 = new javax.swing.JButton();
-        casa16 = new javax.swing.JButton();
-        casa17 = new javax.swing.JButton();
-        casa18 = new javax.swing.JButton();
-        casa19 = new javax.swing.JButton();
-        casa20 = new javax.swing.JButton();
-        casa21 = new javax.swing.JButton();
-        casa22 = new javax.swing.JButton();
-        casa23 = new javax.swing.JButton();
-        casa24 = new javax.swing.JButton();
-        casa25 = new javax.swing.JButton();
-        casa26 = new javax.swing.JButton();
-        casa27 = new javax.swing.JButton();
-        casa28 = new javax.swing.JButton();
-        casa29 = new javax.swing.JButton();
-        casa30 = new javax.swing.JButton();
-        casa31 = new javax.swing.JButton();
         casa32 = new javax.swing.JButton();
+        casa31 = new javax.swing.JButton();
+        casa30 = new javax.swing.JButton();
+        casa29 = new javax.swing.JButton();
+        casa28 = new javax.swing.JButton();
+        casa27 = new javax.swing.JButton();
+        casa26 = new javax.swing.JButton();
+        casa25 = new javax.swing.JButton();
+        casa24 = new javax.swing.JButton();
+        casa23 = new javax.swing.JButton();
+        casa22 = new javax.swing.JButton();
+        casa21 = new javax.swing.JButton();
+        casa20 = new javax.swing.JButton();
+        casa19 = new javax.swing.JButton();
+        casa18 = new javax.swing.JButton();
+        casa17 = new javax.swing.JButton();
+        casa16 = new javax.swing.JButton();
+        casa15 = new javax.swing.JButton();
+        casa14 = new javax.swing.JButton();
+        casa13 = new javax.swing.JButton();
+        casa12 = new javax.swing.JButton();
+        casa11 = new javax.swing.JButton();
+        casa10 = new javax.swing.JButton();
+        casa9 = new javax.swing.JButton();
+        casa8 = new javax.swing.JButton();
+        casa7 = new javax.swing.JButton();
+        casa6 = new javax.swing.JButton();
+        casa5 = new javax.swing.JButton();
+        casa4 = new javax.swing.JButton();
+        casa3 = new javax.swing.JButton();
+        casa2 = new javax.swing.JButton();
         fverde1 = new javax.swing.JButton();
         fverde2 = new javax.swing.JButton();
         fverde3 = new javax.swing.JButton();
@@ -103,8 +103,10 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         carta4 = new javax.swing.JButton();
         carta5 = new javax.swing.JButton();
         carta6 = new javax.swing.JButton();
+        notificacao = new javax.swing.JLabel();
+        peca = new javax.swing.JLabel();
+        turno = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(185, 122, 87));
 
@@ -118,138 +120,138 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa2.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa2.addActionListener(new java.awt.event.ActionListener() {
+        casa32.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa32.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa2ActionPerformed(evt);
+                casa32ActionPerformed(evt);
             }
         });
 
-        casa3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa3.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa3.addActionListener(new java.awt.event.ActionListener() {
+        casa31.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa31.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa3ActionPerformed(evt);
+                casa31ActionPerformed(evt);
             }
         });
 
-        casa4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa4.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa4.addActionListener(new java.awt.event.ActionListener() {
+        casa30.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa30.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa4ActionPerformed(evt);
+                casa30ActionPerformed(evt);
             }
         });
 
-        casa5.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa5.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa5.addActionListener(new java.awt.event.ActionListener() {
+        casa29.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa29.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa5ActionPerformed(evt);
+                casa29ActionPerformed(evt);
             }
         });
 
-        casa6.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa6.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa6.addActionListener(new java.awt.event.ActionListener() {
+        casa28.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa28.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa6ActionPerformed(evt);
+                casa28ActionPerformed(evt);
             }
         });
 
-        casa7.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa7.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa7.addActionListener(new java.awt.event.ActionListener() {
+        casa27.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa27.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa7ActionPerformed(evt);
+                casa27ActionPerformed(evt);
             }
         });
 
-        casa8.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa8.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa8.addActionListener(new java.awt.event.ActionListener() {
+        casa26.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa26.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa8ActionPerformed(evt);
+                casa26ActionPerformed(evt);
             }
         });
 
-        casa9.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa9.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa9.addActionListener(new java.awt.event.ActionListener() {
+        casa25.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa25.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa9ActionPerformed(evt);
+                casa25ActionPerformed(evt);
             }
         });
 
-        casa10.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa10.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa10.addActionListener(new java.awt.event.ActionListener() {
+        casa24.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa24.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa10ActionPerformed(evt);
+                casa24ActionPerformed(evt);
             }
         });
 
-        casa11.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa11.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa11.addActionListener(new java.awt.event.ActionListener() {
+        casa23.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa23.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa11ActionPerformed(evt);
+                casa23ActionPerformed(evt);
             }
         });
 
-        casa12.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa12.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa12.addActionListener(new java.awt.event.ActionListener() {
+        casa22.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa22.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa12ActionPerformed(evt);
+                casa22ActionPerformed(evt);
             }
         });
 
-        casa13.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa13.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa13.addActionListener(new java.awt.event.ActionListener() {
+        casa21.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa21.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa13ActionPerformed(evt);
+                casa21ActionPerformed(evt);
             }
         });
 
-        casa14.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa14.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa14.addActionListener(new java.awt.event.ActionListener() {
+        casa20.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa20.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa14ActionPerformed(evt);
+                casa20ActionPerformed(evt);
             }
         });
 
-        casa15.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa15.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa15.addActionListener(new java.awt.event.ActionListener() {
+        casa19.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa19.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa15ActionPerformed(evt);
+                casa19ActionPerformed(evt);
             }
         });
 
-        casa16.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa16.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa16.addActionListener(new java.awt.event.ActionListener() {
+        casa18.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa18.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa16ActionPerformed(evt);
+                casa18ActionPerformed(evt);
             }
         });
 
@@ -263,138 +265,138 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
-        casa18.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa18.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa18.addActionListener(new java.awt.event.ActionListener() {
+        casa16.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa16.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa18ActionPerformed(evt);
+                casa16ActionPerformed(evt);
             }
         });
 
-        casa19.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa19.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa19.addActionListener(new java.awt.event.ActionListener() {
+        casa15.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa15.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa19ActionPerformed(evt);
+                casa15ActionPerformed(evt);
             }
         });
 
-        casa20.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa20.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa20.addActionListener(new java.awt.event.ActionListener() {
+        casa14.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa14.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa20ActionPerformed(evt);
+                casa14ActionPerformed(evt);
             }
         });
 
-        casa21.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa21.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa21.addActionListener(new java.awt.event.ActionListener() {
+        casa13.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa13.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa21ActionPerformed(evt);
+                casa13ActionPerformed(evt);
             }
         });
 
-        casa22.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa22.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa22.addActionListener(new java.awt.event.ActionListener() {
+        casa12.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa12.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa22ActionPerformed(evt);
+                casa12ActionPerformed(evt);
             }
         });
 
-        casa23.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa23.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa23.addActionListener(new java.awt.event.ActionListener() {
+        casa11.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa11.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa23ActionPerformed(evt);
+                casa11ActionPerformed(evt);
             }
         });
 
-        casa24.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa24.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa24.addActionListener(new java.awt.event.ActionListener() {
+        casa10.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa10.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa24ActionPerformed(evt);
+                casa10ActionPerformed(evt);
             }
         });
 
-        casa25.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa25.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa25.addActionListener(new java.awt.event.ActionListener() {
+        casa9.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa9.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa25ActionPerformed(evt);
+                casa9ActionPerformed(evt);
             }
         });
 
-        casa26.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa26.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa26.addActionListener(new java.awt.event.ActionListener() {
+        casa8.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa8.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa26ActionPerformed(evt);
+                casa8ActionPerformed(evt);
             }
         });
 
-        casa27.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa27.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa27.addActionListener(new java.awt.event.ActionListener() {
+        casa7.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa7.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa27ActionPerformed(evt);
+                casa7ActionPerformed(evt);
             }
         });
 
-        casa28.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa28.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa28.addActionListener(new java.awt.event.ActionListener() {
+        casa6.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa6.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa28ActionPerformed(evt);
+                casa6ActionPerformed(evt);
             }
         });
 
-        casa29.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa29.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa29.addActionListener(new java.awt.event.ActionListener() {
+        casa5.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa5.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa29ActionPerformed(evt);
+                casa5ActionPerformed(evt);
             }
         });
 
-        casa30.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa30.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa30.addActionListener(new java.awt.event.ActionListener() {
+        casa4.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa4.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa30ActionPerformed(evt);
+                casa4ActionPerformed(evt);
             }
         });
 
-        casa31.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa31.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa31.addActionListener(new java.awt.event.ActionListener() {
+        casa3.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa3.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa31ActionPerformed(evt);
+                casa3ActionPerformed(evt);
             }
         });
 
-        casa32.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
-        casa32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
-        casa32.setPreferredSize(new java.awt.Dimension(50, 50));
-        casa32.addActionListener(new java.awt.event.ActionListener() {
+        casa2.setFont(new java.awt.Font("Tahoma", 0, 3)); // NOI18N
+        casa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceGrafica/vazio.png"))); // NOI18N
+        casa2.setPreferredSize(new java.awt.Dimension(50, 50));
+        casa2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                casa32ActionPerformed(evt);
+                casa2ActionPerformed(evt);
             }
         });
 
@@ -607,10 +609,14 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setText("Notificacões");
+        notificacao.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        notificacao.setText("Notificacões");
 
-        jLabel2.setText("Suas peças são ---");
+        peca.setText("Suas peças são ---");
+
+        turno.setText("Jogador da vez");
+
+        jLabel1.setText("Ultimo descarte:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -618,129 +624,138 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
+                            .addGap(624, 624, 624)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cvermelho2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cvermelho1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(0, 0, 0)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cvermelho3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cvermelho4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(casa31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(cverde3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, 0)
-                                    .addComponent(cverde4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(casa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(casa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(descarte, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(cverde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, 0)
-                                    .addComponent(cverde2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(56, 56, 56)
-                            .addComponent(carta1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(carta2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(carta3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(carta4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(carta5, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(carta6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(624, 624, 624)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cvermelho2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cvermelho1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cvermelho3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cvermelho4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(casa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(casa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(casa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(casa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(casa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(casa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(casa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(descarte, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(casa31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(casa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(casa28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(casa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(fverde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(casa27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(fverde2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(casa26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(casa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(casa25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(0, 0, 0)
+                                                    .addComponent(casa24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(0, 0, 0)
+                                                    .addComponent(casa23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(0, 0, 0)
+                                                    .addComponent(casa22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(0, 0, 0)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(fvermelho4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(casa21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                    .addComponent(casa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(0, 0, 0)
                                                     .addComponent(casa6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(casa32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(fverde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGap(0, 0, 0)
                                                     .addComponent(casa7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(fverde2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGap(0, 0, 0)
                                                     .addComponent(casa8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(casa30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(casa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
+                                                    .addGap(0, 0, 0)
+                                                    .addComponent(casa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(casa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(0, 0, 0)
+                                                    .addComponent(casa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(casa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(fvermelho4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(casa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                        .addComponent(casa29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(casa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 0, 0)
-                                                        .addComponent(casa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(casa24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(fvermelho3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGap(0, 0, 0)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(fvermelho2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(casa23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(fverde3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, 0)
-                                                .addComponent(fverde4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(casa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, 0)
-                                                .addComponent(casa17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(fvermelho1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(casa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(casa22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(casa21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)))))))))
+                                                        .addComponent(fvermelho3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGap(0, 0, 0)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(fvermelho2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(casa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(fverde3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(0, 0, 0)
+                                            .addComponent(fverde4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(casa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(0, 0, 0)
+                                            .addComponent(casa17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(fvermelho1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(0, 0, Short.MAX_VALUE)
+                                            .addComponent(casa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(casa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(0, 0, Short.MAX_VALUE)
+                                            .addComponent(casa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cverde3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(cverde4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cverde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(cverde2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(56, 56, 56))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(peca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGap(0, 0, 0)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(turno, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(notificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(carta1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(carta2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(carta3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(carta4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(carta5, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(carta6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
@@ -761,20 +776,20 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(143, 143, 143)
-                                            .addComponent(casa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(casa29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(46, 46, 46)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(casa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(casa7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(casa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(casa27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(94, 94, 94)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(casa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(casa6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(casa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(casa28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(casa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(casa8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(casa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(casa26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(cvermelho4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -782,71 +797,74 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
                                 .addGap(143, 143, 143)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(casa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(fverde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(casa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(casa31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(casa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(casa32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
                                         .addComponent(casa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(fverde4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(fverde2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(fverde3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(casa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(fvermelho1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(99, 99, 99)
-                                        .addComponent(casa22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(casa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(casa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(casa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(fvermelho3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(fvermelho4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, 0)
-                                        .addComponent(casa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(casa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, 0)
-                                        .addComponent(casa21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(casa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(fvermelho2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(descarte, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(49, 49, 49))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(casa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(casa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(casa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(casa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(casa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(casa24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casa25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casa23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casa22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casa21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(383, 383, 383)
-                        .addComponent(casa32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(casa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(casa31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(casa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(99, 99, 99))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(casa24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(casa30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(casa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(casa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(47, 47, 47))
-                        .addComponent(casa29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(casa25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(casa23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(casa5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(casa6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(casa7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(casa8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(casa9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(casa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(notificacao, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(peca)
+                    .addComponent(turno))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(carta6, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
@@ -867,165 +885,165 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void casa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa4ActionPerformed
+    private void casa30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa30ActionPerformed
         // TODO add your handling code here:
        setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa4ActionPerformed
+    }//GEN-LAST:event_casa30ActionPerformed
 
     private void casa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa1ActionPerformed
         // TODO add your handling code here:
          setPecaCasa((JButton) evt.getSource());
     }//GEN-LAST:event_casa1ActionPerformed
 
-    private void casa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa2ActionPerformed
+    private void casa32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa32ActionPerformed
         // TODO add your handling code here:
          setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa2ActionPerformed
-
-    private void casa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa3ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa3ActionPerformed
-
-    private void casa5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa5ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa5ActionPerformed
-
-    private void casa6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa6ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa6ActionPerformed
-
-    private void casa7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa7ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa7ActionPerformed
-
-    private void casa8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa8ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa8ActionPerformed
-
-    private void casa9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa9ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa9ActionPerformed
-
-    private void casa10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa10ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa10ActionPerformed
-
-    private void casa11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa11ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa11ActionPerformed
-
-    private void casa12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa12ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa12ActionPerformed
-
-    private void casa13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa13ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa13ActionPerformed
-
-    private void casa14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa14ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa14ActionPerformed
-
-    private void casa17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa17ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa17ActionPerformed
-
-    private void casa15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa15ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa15ActionPerformed
-
-    private void casa16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa16ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa16ActionPerformed
-
-    private void casa20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa20ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa20ActionPerformed
-
-    private void casa18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa18ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa18ActionPerformed
-
-    private void casa19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa19ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa19ActionPerformed
-
-    private void casa21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa21ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa21ActionPerformed
-
-    private void casa22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa22ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa22ActionPerformed
-
-    private void casa25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa25ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa25ActionPerformed
-
-    private void casa23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa23ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa23ActionPerformed
-
-    private void casa24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa24ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa24ActionPerformed
-
-    private void casa26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa26ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa26ActionPerformed
-
-    private void casa27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa27ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa27ActionPerformed
-
-    private void casa28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa28ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa28ActionPerformed
-
-    private void casa29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa29ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa29ActionPerformed
-
-    private void casa30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa30ActionPerformed
-        // TODO add your handling code here:
-         setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa30ActionPerformed
+    }//GEN-LAST:event_casa32ActionPerformed
 
     private void casa31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa31ActionPerformed
         // TODO add your handling code here:
          setPecaCasa((JButton) evt.getSource());
     }//GEN-LAST:event_casa31ActionPerformed
 
-    private void casa32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa32ActionPerformed
+    private void casa29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa29ActionPerformed
         // TODO add your handling code here:
          setPecaCasa((JButton) evt.getSource());
-    }//GEN-LAST:event_casa32ActionPerformed
+    }//GEN-LAST:event_casa29ActionPerformed
+
+    private void casa28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa28ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa28ActionPerformed
+
+    private void casa27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa27ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa27ActionPerformed
+
+    private void casa26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa26ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa26ActionPerformed
+
+    private void casa25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa25ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa25ActionPerformed
+
+    private void casa24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa24ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa24ActionPerformed
+
+    private void casa23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa23ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa23ActionPerformed
+
+    private void casa22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa22ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa22ActionPerformed
+
+    private void casa21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa21ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa21ActionPerformed
+
+    private void casa20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa20ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa20ActionPerformed
+
+    private void casa17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa17ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa17ActionPerformed
+
+    private void casa19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa19ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa19ActionPerformed
+
+    private void casa18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa18ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa18ActionPerformed
+
+    private void casa14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa14ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa14ActionPerformed
+
+    private void casa16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa16ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa16ActionPerformed
+
+    private void casa15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa15ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa15ActionPerformed
+
+    private void casa13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa13ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa13ActionPerformed
+
+    private void casa12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa12ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa12ActionPerformed
+
+    private void casa9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa9ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa9ActionPerformed
+
+    private void casa11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa11ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa11ActionPerformed
+
+    private void casa10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa10ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa10ActionPerformed
+
+    private void casa8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa8ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa8ActionPerformed
+
+    private void casa7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa7ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa7ActionPerformed
+
+    private void casa6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa6ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa6ActionPerformed
+
+    private void casa5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa5ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa5ActionPerformed
+
+    private void casa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa4ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa4ActionPerformed
+
+    private void casa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa3ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa3ActionPerformed
+
+    private void casa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casa2ActionPerformed
+        // TODO add your handling code here:
+         setPecaCasa((JButton) evt.getSource());
+    }//GEN-LAST:event_casa2ActionPerformed
 
     private void fverde1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fverde1ActionPerformed
         // TODO add your handling code here:
@@ -1149,6 +1167,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     
     //metodo implementado nas casas iniciais
     public void moverPecaInicio(String casa ){
+        
         ator.moverPecaInicio(casa);
         
     }
@@ -1161,7 +1180,8 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     
     //ainda n tem utilidade, apenas coloca as bolinhas nos botoes clicacos
     private void setPecaCasa(JButton casa){
-       casa.setIcon(casaverde); 
+        
+             this.ator.moverPecaEmJogo(casa.getText());
     }
     
     
@@ -1185,18 +1205,22 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     public void atualizarInterface(Tabuleiro tabuleiro){
         Jogador jogador;
         Jogador jogador2;
+       
         Icon icone;
         if(tabuleiro.getJogadorLocal().getCor() == ator.getOrdem()){
             jogador = tabuleiro.getJogadorLocal();
             jogador2 = tabuleiro.getJogadorRemoto();
-            
         }
         else{ 
             jogador = tabuleiro.getJogadorRemoto();
             jogador2 = tabuleiro.getJogadorLocal();
 
         }
-        
+        String turno = "Vez do oponente";
+        if(jogador.isTurno()){
+            turno = "Sua vez";
+        }
+         this.turno.setText(turno);
         //instancia os arrays necessarios para atualizar cartas e casas
         if(tabuleiro.getRodada() == 1)
              iniciarTabuleiro(tabuleiro);
@@ -1220,18 +1244,17 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         
         //informa se o oponente teve as cartas descartadas
         if(jogador2.isDescartado())
-            this.notificar("As cartas do jogador adversario foram descartadas");
+            this.notificar("As cartas do adversario foram descartadas");
         
         
         //vai varrer o array posicoespeca do tabuleiro e atualizar a interface com as casas ocupadas
         ArrayList<String> posicoes = tabuleiro.getPosicaoPecas();
-        
+        System.out.println(posicoes);
             
             for(JButton casa : this.casasTabuleiro){
                 for(int i = 0; i < posicoes.size(); i++){
                 casa.setIcon(vazio);
                 if(casa.getText().equalsIgnoreCase(posicoes.get(i))){
-                    
                     //as primeiras quatro pecas do array sao do jogador verde
                     if(i < 4)
                         casa.setIcon(casaverde);
@@ -1250,13 +1273,13 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
         espacoCartas = new ArrayList<javax.swing.JButton>();
         casasTabuleiro = new ArrayList<javax.swing.JButton>();
         if(tabuleiro.getJogadorLocal().getCor() == ator.getOrdem()){
-            jLabel2.setText("Suas peças são verdes");
+            peca.setText("Suas peças são verdes");
             icone = casaverde;
             iconeOponente = casavermelho;
             
         }
         else{
-            jLabel2.setText("Suas peças são vermelhas");
+            peca.setText("Suas peças são vermelhas");
             icone = casavermelho;
             iconeOponente = casavermelho;  
         }
@@ -1279,37 +1302,37 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
        espacoCartas.add(carta6);
           
        casasTabuleiro.add(casa1);
-       casasTabuleiro.add(casa2);
-       casasTabuleiro.add(casa3);
-       casasTabuleiro.add(casa4);
-       casasTabuleiro.add(casa5);
-       casasTabuleiro.add(casa6);
-       casasTabuleiro.add(casa7);
-       casasTabuleiro.add(casa8);
-       casasTabuleiro.add(casa9);
-       casasTabuleiro.add(casa10);
-       casasTabuleiro.add(casa11);
-       casasTabuleiro.add(casa12);
-       casasTabuleiro.add(casa13);
-       casasTabuleiro.add(casa14);
-       casasTabuleiro.add(casa15);
-       casasTabuleiro.add(casa16);
-       casasTabuleiro.add(casa17);
-       casasTabuleiro.add(casa18);
-       casasTabuleiro.add(casa19);
-       casasTabuleiro.add(casa20);
-       casasTabuleiro.add(casa21);
-       casasTabuleiro.add(casa22);
-       casasTabuleiro.add(casa23);
-       casasTabuleiro.add(casa24);
-       casasTabuleiro.add(casa25);
-       casasTabuleiro.add(casa26);
-       casasTabuleiro.add(casa27);
-       casasTabuleiro.add(casa28);
-       casasTabuleiro.add(casa29);
-       casasTabuleiro.add(casa30);
-       casasTabuleiro.add(casa31);
        casasTabuleiro.add(casa32);
+       casasTabuleiro.add(casa31);
+       casasTabuleiro.add(casa30);
+       casasTabuleiro.add(casa29);
+       casasTabuleiro.add(casa28);
+       casasTabuleiro.add(casa27);
+       casasTabuleiro.add(casa26);
+       casasTabuleiro.add(casa25);
+       casasTabuleiro.add(casa24);
+       casasTabuleiro.add(casa23);
+       casasTabuleiro.add(casa22);
+       casasTabuleiro.add(casa21);
+       casasTabuleiro.add(casa20);
+       casasTabuleiro.add(casa19);
+       casasTabuleiro.add(casa18);
+       casasTabuleiro.add(casa17);
+       casasTabuleiro.add(casa16);
+       casasTabuleiro.add(casa15);
+       casasTabuleiro.add(casa14);
+       casasTabuleiro.add(casa13);
+       casasTabuleiro.add(casa12);
+       casasTabuleiro.add(casa11);
+       casasTabuleiro.add(casa10);
+       casasTabuleiro.add(casa9);
+       casasTabuleiro.add(casa8);
+       casasTabuleiro.add(casa7);
+       casasTabuleiro.add(casa6);
+       casasTabuleiro.add(casa5);
+       casasTabuleiro.add(casa4);
+       casasTabuleiro.add(casa3);
+       casasTabuleiro.add(casa2);
        casasTabuleiro.add(cverde1);
        casasTabuleiro.add(cverde2);
        casasTabuleiro.add(cverde3);
@@ -1382,7 +1405,7 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     }
     
     public void notificar(String mensagem){
-        jLabel1.setText(mensagem);
+        notificacao.setText(mensagem);
         
     }
    
@@ -1444,7 +1467,9 @@ public class JPanelTabuleiro extends javax.swing.JPanel {
     private javax.swing.JButton fvermelho3;
     private javax.swing.JButton fvermelho4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel notificacao;
+    private javax.swing.JLabel peca;
+    private javax.swing.JLabel turno;
     // End of variables declaration//GEN-END:variables
 
 

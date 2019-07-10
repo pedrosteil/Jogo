@@ -158,6 +158,7 @@ public class ControladorTabuleiro {
         
         public void encerrarPartidaLocalmente(){
             this.tabuleiro = new Tabuleiro();
+            this.atorJogador.setOrdem(0);
             this.definirPartidaAndamento(false);
         }
         
@@ -217,6 +218,19 @@ public class ControladorTabuleiro {
             this.tabuleiro.getJogadorRemoto().setCartas(this.tabuleiro.getBaralho().getMao(cartas));  
         }
         
+        public void getNovaRodada(){
+            System.out.println("Verificando");
+            System.out.println("encerrado " + this.verificarEncerramento());
+            
+            if(!this.verificarEncerramento()){
+                if(this.podeIniciarNovaRodada()){
+                    System.out.println("pode iniciar rodada " + this.podeIniciarNovaRodada());
+                  this.tabuleiro.setRodada(this.tabuleiro.getRodada() + 1);
+                  this.iniciarRodada(this.tabuleiro.getRodada());
+                }
+            }
+        }
+        
         
         
         public boolean selecionarCarta(String carta){
@@ -226,10 +240,7 @@ public class ControladorTabuleiro {
                 return false;
             else if(!this.informarPartidaAndamento())
                 return false;
-            else if(carta == ""){
-                this.atorJogador.notificar("nao ha carta");
-                return false;
-            }
+           
             
             if(this.tabuleiro.getJogadorLocal().getCor() == atorJogador.getOrdem()){               
                 jogador = this.tabuleiro.getJogadorLocal();
@@ -240,17 +251,38 @@ public class ControladorTabuleiro {
   
             if(jogador.isTurno() && jogador.getCartaEscolhida() == null)  {  
                     cartas = jogador.getCartas();
+                    
+                    //verifica todas as pecas e cartas do jogador, se nenhum movimento n eh possivel descarta as carta
+                    boolean movimento = false;
+                    for(Carta cartaJogador : cartas){
+                           if(this.tabuleiro.jogadorPodeMoverPecas(this.atorJogador.getOrdem(), cartaJogador.getNumero())){
+                               movimento = true;
+                                }
+                     }
+                    if(!movimento){
+                        jogador.descartarMao();
+                            this.tabuleiro.inverterTurno();  
+                            this.atorJogador.notificar("Suas cartas nao podem movimentar pecas, cartas descartadas");
+                            this.getNovaRodada();
+                            this.atorJogador.atualizarInterface(tabuleiro);
+                            this.netgames.enviaJogada(tabuleiro);
+                            return false;
+                    }
+                    //verifica se as pecas estao todas no inicio, forcando o jogador a ter ou escolher carta de saida
                     if(this.tabuleiro.pecasNoInicio(jogador.getCor())){
                         boolean possui = false;
                         for(int i=0; i<cartas.size(); i++){
                             if(cartas.get(i).getNumero() == 1 || cartas.get(i).getNumero() == 13)
                                 possui = true;
                         }       
+                        
+                        //qnd jogador n tem carta de saida, descarta
                         if(possui == false){
                             jogador.descartarMao();
                             this.tabuleiro.inverterTurno();
-                            this.atorJogador.notificar("Você não possui cartas para entrar em jogo, cartas descartadas");
                             this.atorJogador.atualizarInterface(tabuleiro);
+                            this.atorJogador.notificar("Você não possui cartas para entrar em jogo, cartas descartadas");
+                            this.getNovaRodada();
                             this.netgames.enviaJogada(tabuleiro);
                             return false;
                         }
@@ -264,18 +296,27 @@ public class ControladorTabuleiro {
                         Carta cartaMao = cartas.get(i);
                         if(cartaMao.getNumero() == Integer.parseInt(carta)){
                              jogador.setCartaEscolhida(cartaMao);
-                             jogador.getCartas().remove(i);
+                             cartas.remove(i);
+                             
                         }
 
                     }
+                    jogador.setCartas(cartas);
+                    this.getNovaRodada();
                      this.netgames.enviaJogada(this.tabuleiro);
                      this.atorJogador.atualizarInterface(this.tabuleiro);
                      return true;
                 }
-                else{
-                    atorJogador.notificar("Vez do oponente");
+             else if(carta == ""){
+                this.getNovaRodada();
+                this.netgames.enviaJogada(tabuleiro);
+                this.atorJogador.atualizarInterface(tabuleiro);
+                this.atorJogador.notificar("nao ha carta");
+                return false;
+            }
+               
                     return false;
-                }
+                
        
         }
         
@@ -307,8 +348,10 @@ public class ControladorTabuleiro {
             else if(carta.getNumero() == 1 || carta.getNumero() == 13){
                  ArrayList<String> posicaoPecas = this.tabuleiro.getPosicaoPecas();
                 for( int i = 0; i<posicaoPecas.size(); i++){
-                    System.out.println(posicaoPecas.get(i) + "" + casaEscolhida);
+                   
                     if(posicaoPecas.get(i).equalsIgnoreCase(casaEscolhida)){
+                        
+                       
                        String novaPosicao = this.moverPeca(casaEscolhida, carta.getNumero(), this.atorJogador.getOrdem());
                        System.out.println(novaPosicao);
                        if(novaPosicao != null){
@@ -316,6 +359,7 @@ public class ControladorTabuleiro {
                            this.tabuleiro.setPosicaoPecas(posicaoPecas);
                            this.tabuleiro.inverterTurno();
                            jogador.setCartaEscolhida(null);
+                           this.getNovaRodada();
                            netgames.enviaJogada(tabuleiro);
                            this.atorJogador.atualizarInterface(this.tabuleiro);
                            return true;
@@ -330,7 +374,70 @@ public class ControladorTabuleiro {
      
         }
         
-        public boolean verifificarEncerramento(){
+        public boolean moverPecaEmJogo(String casaEscolhida){ 
+            
+            if(!this.atorJogador.isConectado())
+                return false;
+            else if(!this.tabuleiro.isPartidaEmAndamento())
+                return false;
+
+            Jogador jogador;
+            if(this.tabuleiro.getJogadorLocal().getCor() == this.atorJogador.getOrdem()){
+                jogador = this.tabuleiro.getJogadorLocal();
+            }
+            else
+                jogador = this.tabuleiro.getJogadorRemoto();
+            
+            Carta carta = jogador.getCartaEscolhida();
+            
+            if(carta == null && jogador.isTurno()){
+                this.atorJogador.notificar("Selecione uma carta");
+                return false;
+            }
+            else if(!jogador.isTurno()){
+                this.atorJogador.notificar("Vez do oponente");
+                return false;
+            }
+            else{               
+                ArrayList<String> posicaoPecas = this.tabuleiro.getPosicaoPecas();
+                for( int i = 0; i< posicaoPecas.size(); i++){
+                    if(posicaoPecas.get(i).equalsIgnoreCase(casaEscolhida)){
+                        
+                         //verifica se a casa contem uma peca do jogador
+                        if(this.atorJogador.getOrdem() == 1 && i >= 4){
+                            return false;
+                        }
+                        else if(this.atorJogador.getOrdem() == 2 && i < 4)
+                            return false;
+                        
+                       String novaPosicao = this.moverPeca(casaEscolhida, carta.getNumero(), jogador.getCor());
+                       this.atorJogador.notificar(novaPosicao);
+                       if(novaPosicao != null){
+                           //verifica se a casa de destino possui peca, se possuir envia essa peca para a posicao inicial
+                           for( int j = 0; j<posicaoPecas.size(); j++){
+                               if(posicaoPecas.get(j).equalsIgnoreCase(novaPosicao)){
+                                   posicaoPecas.set(j, this.tiraPecaJogo(j));
+                               }
+                           }
+                           posicaoPecas.set(i, novaPosicao);
+                           this.tabuleiro.setPosicaoPecas(posicaoPecas);
+                           this.tabuleiro.inverterTurno();
+                           jogador.setCartaEscolhida(null);
+                           this.getNovaRodada();
+                           netgames.enviaJogada(tabuleiro);
+                           this.atorJogador.atualizarInterface(this.tabuleiro);
+                           return true;
+                       }     
+                    }                   
+                }            
+            }
+            
+            return false;
+        }
+                
+                
+        
+        public boolean verificarEncerramento(){
             if( this.tabuleiro.pecasNaCasaFinal(1)){
                 this.tabuleiro.setVencedor(this.tabuleiro.getJogadorLocal());
                 return true;
@@ -342,38 +449,56 @@ public class ControladorTabuleiro {
             return false;
         }
         
+        public boolean podeIniciarNovaRodada(){
+            return this.tabuleiro.podeIniciarNovaRodada();
+        }
+        
+        
+    
         public void  atualizarEstado(Tabuleiro tabuleiro){
             this.tabuleiro = tabuleiro;
             this.atorJogador.atualizarInterface(tabuleiro);
             
+            
         }
         
+        public String tiraPecaJogo(int peca){
+            peca = peca + 1;
+            if(peca < 4){
+                return "cverde" + peca;
+            }
+            else
+                return "cvermelho" +( peca - 4);
+        }
+        
+        
+                
         public String moverPeca(String casa, int numero, int jogador){
             if((casa.equals("cverde1") || casa.equals("cverde2") || casa.equals("cverde3") ||casa.equals("cverde4")) && (numero == 1 || numero == 13) && jogador == 1 )
                 return "casa1";
             else if((casa.equals("cvermelho1") || casa.equals("cvermelho2") || casa.equals("cvermelho3") ||casa.equals("cvermelho4")) && (numero == 1 || numero == 13)  && jogador == 2)
                 return "casa17";
             else if(casa.contains("casa")){
-               int casadestino = Integer.parseInt(casa.substring(4));
+               int casaatual = Integer.parseInt(casa.substring(4));
                if(jogador == 1){
-                   if((casadestino + numero) <= 32)
-                       return "casa" + (casadestino + numero);
-                   else if ((casadestino + numero) <= 36){
-                       return "cverde" + (casadestino + numero - 33);
+                   if((casaatual + numero) <= 31)
+                       return "casa" + (casaatual + numero);
+                   else if ((casaatual + numero) <= 35){
+                       return "fverde" + (casaatual+ numero - 31);
                    }
                    else
-                       return "casa" + (casadestino + numero - 33);
+                       return "casa" + (casaatual+ numero - 32);
                }
                else{
-                   if((casadestino + numero) <= 16 ){
-                       return "casa" + (casadestino + numero);
+                   if((casaatual + numero) <= 15 ){
+                       return "casa" + (casaatual + numero);
                    }
-                   else if ((casadestino < 16 )&& (casadestino + numero <=20))
-                       return "cvermelho" + (casadestino + numero - 16);
-                   else if((casadestino + numero) <= 32)
-                       return "casa" + (casadestino + numero);
+                   else if ((casaatual <= 15 )&& ((casaatual + numero) <=19))
+                       return "fvermelho" + (casaatual + numero - 15);
+                   else if((casaatual + numero) <= 32)
+                       return "casa" + (casaatual+ numero);
                    else
-                       return "casa" + (casadestino + numero - 33);
+                       return "casa" + (casaatual + numero - 32);
                }
                
             }

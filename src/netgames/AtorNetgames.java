@@ -41,7 +41,7 @@ public class AtorNetgames implements OuvidorProxy {
             proxy.addOuvinte(this);	
 			try {
 				proxy.conectar(servidor, nome);
-                                this.controlador.definirConectado(); 
+                                 
 			} catch (JahConectadoException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -55,6 +55,7 @@ public class AtorNetgames implements OuvidorProxy {
 				e.printStackTrace();
 				return "Voce esqueceu o arquivo de propriedades";
 			}
+                        this.controlador.definirConectado();
                         return "Sucesso: conectado a Netgames Server";
 			
 		
@@ -76,12 +77,12 @@ public class AtorNetgames implements OuvidorProxy {
 	public String iniciarPartida() {
 		try {
 			proxy.iniciarPartida(new Integer(2)); // supondo 2 jogadores, o que pode ser alterado
-                        return "Solicitacao enviada";
 		} catch (NaoConectadoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return "Falha ao tentar enviar solicitacao de inicio enviada a Netgames Server";
 		}
+                return "Solicitacao Enviada ao servidor";
           
 	}
 
@@ -111,7 +112,6 @@ public class AtorNetgames implements OuvidorProxy {
         public void receberJogada(Jogada jogada) {
             Tabuleiro tabuleiro = (Tabuleiro) jogada;
             this.controlador.atualizarEstado(tabuleiro);
-            this.receberMensagem("jogada recebida");
  
 	}
 
@@ -127,7 +127,6 @@ public class AtorNetgames implements OuvidorProxy {
         try {
             Jogada jogada = (Jogada) tabuleiro;
             proxy.enviaJogada(tabuleiro);      
-            this.receberMensagem("jogada enviada");
         } catch (NaoJogandoException ex) {
             this.receberMensagem(ex.getMessage());
         }

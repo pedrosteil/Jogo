@@ -140,6 +140,49 @@ public class Tabuleiro implements Jogada {
     public void setVencedor(Jogador vencedor) {
         this.vencedor = vencedor;
     }
+    
+    
+    public boolean jogadorPodeMoverPecas(int jogador, int carta){
+  
+        if(this.pecasNoInicio(jogador) && (carta == 1 || carta == 13))
+            return true;
+        else if(this.pecasNaCasaFinal(jogador))
+            return false;
+        
+        String casa;
+        if(jogador == 1){
+            casa = "verde";
+        }
+        else
+            casa = "vermelho";
+        
+        for(int i = 4*jogador - 4; i < jogador*4; i++){
+            String posicao = posicaoPecas.get(i);
+                if(posicao.contains("casa")){
+                    return true;
+                }
+                else if(posicao.contains("c" + casa) && (carta == 1 || carta ==13)){
+                    return true;
+                }
+                else if(posicao.contains("f" + casa)){
+                    int numeroposicao = Integer.parseInt(posicao.substring(casa.length()+1));
+                    if(numeroposicao + carta <= 4);
+                        return true;
+            }
+        }
+        return false;
+    }
+    
+    
+    public boolean podeIniciarNovaRodada(){
+        System.out.println(this.getJogadorLocal().getCartas() + " " + this.getJogadorRemoto().getCartas());
+            if(this.getJogadorLocal().getCartas() == null && this.getJogadorRemoto().getCartas() == null) 
+                return true;
+            else
+                return false;
+        }
+    
+        
 }
 
      
